@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddle Show</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container-form"> 
+    <img class="logo" src="./assets/img/Workshop-150x150 (1).png" alt="logo">  
+    <div class="titulo">
+        <h1>Tu paleta ideal en 3 simples pasos</h1>
+        <h3>Encontra las mejores marcas y modelos</h3>
+    </div>
+  
+    <div class="intro">
+        <h3>¿Queres una paleta y no sabes cual elegir?</h3>
+        <h4>¡Tenemos el <span class="texto-precio">mejor precio</span> y <span class="texto-servicio">servicio garantizado</span>!</h4>
+       
+        <div class="items-intro">
+            <img class="right" src="./assets/img/flecha-dibujada-a-la-derecha.png" alt="flecha">
+            <img class="left" src="./assets/img/flecha-dibujada-a-la-derecha.png" alt="flecha">
+            <span class="precio">porque tenemos todo <b>directo de fabrica</b></span>
+            <span class="servicio">porque te mostramos las <b>mejores marcas</b> en cada gama de acuerdo a tus necesidades</span>
+        </div>
+        <p>¡Vas a <b>ahorrar tiempo, energia y dinero</b>, para poder dedicarte a jugar, disfrutar y mejorar!</p>
+        <button class="btnComenzar">¡Empecemos!</button>
+    </div>
+    
+    
+    <div class="container">
+    <div class="progress-container">
+            <div class="progress-circle active">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-circle">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-circle">3</div>
+            <div class="progress-line"></div>
+            <div class="progress-circle">4</div>
+    </div>
+    <form id="slider-form">
+        <div class="slide active">
+            <p>Te haremos unas simples preguntas para encontrar la paleta que mejor se adapte a vos, y puedas lograr el tipo de juego que buscas. <br>Cuanto mas respondas, mejor sera el asesoramiento  &#128076; &#128513;</p>
+            <label><input type="radio" name="negocio" value="1"> Joyería y Accesorios</label>
+            <label><input type="radio" name="negocio" value="2"> Lencería</label>
+            <label><input type="radio" name="negocio" value="3"> Celulares y Accesorios para celus</label>
+            <label><input type="radio" name="negocio" value="4"> Ópticas</label>
+            <label><input type="radio" name="negocio" value="5"> Farmacia</label>
+            <label><input type="radio" name="negocio" value="6"> Indumentaria</label>
+            <label><input type="radio" name="negocio" value="7"> Calzados</label>
+            <label><input type="radio" name="negocio" value="8"> Blanquería</label>
+            <button type="button" class="next-btn">Siguiente</button>
+        </div>
+        <div class="slide">
+            <h2>¿Qué modelo de bolsita te gusta más?</h2>
+            <label><input type="radio" name="modelo" value="1"> Polietileno (las clásicas BBB)</label>
+            <label><input type="radio" name="modelo" value="2"> Friselina – reutilizables, ecológicas</label>
+            <label><input type="radio" name="modelo" value="3"> Laminadas – las más brillantes</label>
+            <label><input type="radio" name="modelo" value="4"> Ecommerce – para despachar a todo el país</label>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" class="next-btn">Siguiente</button>
+        </div>
+        <div class="slide">
+            <h2>¿Preferís 1 o 2 medidas?</h2>
+            <label><input type="radio" name="medidas" value="1"> Una medida!</label>
+            <label><input type="radio" name="medidas" value="2"> Dos medidas</label>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" class="next-btn">Siguiente</button>
+        </div>
+        <div class="slide">
+            <h2>¿Qué cantidad querés llevar?</h2>
+            <label><input type="radio" name="cantidad" value="1"> El mínimo por medida (250 o 300)</label>
+            <label><input type="radio" name="cantidad" value="2"> 500 por medida</label>
+            <label><input type="radio" name="cantidad" value="3"> 1000 por medida o más</label>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+    </form>
+
+
+
+    </div>
+</div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
