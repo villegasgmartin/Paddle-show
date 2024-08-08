@@ -79,3 +79,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//rango del primer slider
+const slider = document.getElementById('myRange');
+const value1 = document.getElementById('value1');
+const value2 = document.getElementById('value2');
+
+const thresholds = [40000, 70000, 100000, 110000];
+
+slider.addEventListener('input', () => {
+    const sliderValue = slider.value;
+
+    // Encontrar el índice del umbral más cercano
+    let index = thresholds.findIndex(t => sliderValue <= t);
+    // Asignar el valor del umbral al slider
+    slider.value = thresholds[index];
+
+    // Actualizar los valores en pantalla
+    if (index === 3) {
+        value1.style.display = 'none';
+        value2.textContent = 'Más de $100000';
+        value2.style.width = '150px'
+    } else {
+        value1.style.display = 'block';
+        value2.style.width = '80px'
+        value1.textContent = thresholds[index - 1] || 0;
+        value2.textContent = thresholds[index];
+    }
+});

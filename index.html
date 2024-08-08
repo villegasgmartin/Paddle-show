@@ -19,8 +19,8 @@
         <h4>¡Tenemos el <span class="texto-precio">mejor precio</span> y <span class="texto-servicio">servicio garantizado</span>!</h4>
        
         <div class="items-intro">
-            <img class="right" src="./assets/img/flecha-dibujada-a-la-derecha.png" alt="flecha">
-            <img class="left" src="./assets/img/flecha-dibujada-a-la-derecha.png" alt="flecha">
+            <img class="right" src="./assets/img/flecha verde.png" alt="flecha">
+            <img class="left" src="./assets/img/flecha (1) (1).png" alt="flecha">
             <span class="precio">porque tenemos todo <b>directo de fabrica</b></span>
             <span class="servicio">porque te mostramos las <b>mejores marcas</b> en cada gama de acuerdo a tus necesidades</span>
         </div>
@@ -40,41 +40,66 @@
             <div class="progress-circle">4</div>
     </div>
     <form id="slider-form">
-        <div class="slide active">
-            <p>Te haremos unas simples preguntas para encontrar la paleta que mejor se adapte a vos, y puedas lograr el tipo de juego que buscas. <br>Cuanto mas respondas, mejor sera el asesoramiento  &#128076; &#128513;</p>
-            <label><input type="radio" name="negocio" value="1"> Joyería y Accesorios</label>
-            <label><input type="radio" name="negocio" value="2"> Lencería</label>
-            <label><input type="radio" name="negocio" value="3"> Celulares y Accesorios para celus</label>
-            <label><input type="radio" name="negocio" value="4"> Ópticas</label>
-            <label><input type="radio" name="negocio" value="5"> Farmacia</label>
-            <label><input type="radio" name="negocio" value="6"> Indumentaria</label>
-            <label><input type="radio" name="negocio" value="7"> Calzados</label>
-            <label><input type="radio" name="negocio" value="8"> Blanquería</label>
+        <div class="slide active slider1">
+            <p class="slider1-p">Te haremos unas simples preguntas para encontrar la paleta que mejor se adapte a vos, y puedas lograr el tipo de juego que buscas. <br>Cuanto mas respondas, mejor sera el asesoramiento  &#128076; &#128513;</p>
+            <h4>Rango de Precios</h4>
+            <span>Indica el rango de precios que quieres invertir en tu paleta</span>
+            <div class="range-container">
+                <input type="range" min="0" max="110000" step="1000" class="range-slider" id="myRange">
+                <div class="range-values">
+                  <span id="value1">0</span>
+                  <span>-</span>
+                  <span id="value2">40000</span>
+                </div>
+              </div>
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
-            <h2>¿Qué modelo de bolsita te gusta más?</h2>
-            <label><input type="radio" name="modelo" value="1"> Polietileno (las clásicas BBB)</label>
-            <label><input type="radio" name="modelo" value="2"> Friselina – reutilizables, ecológicas</label>
-            <label><input type="radio" name="modelo" value="3"> Laminadas – las más brillantes</label>
-            <label><input type="radio" name="modelo" value="4"> Ecommerce – para despachar a todo el país</label>
+            <h4>Datos del Jugador</h4>
+            <label for="altura">¿Cuanto Medis? (cm)</label>
+            <input type="text" name="" id="" placeholder="Ingresa aqui tu altura">
+            <label for="altura">¿Cuanto Pesas? (kg)</label>
+            <input type="text" name="" id="" placeholder="Ingresa aqui tu peso">
             <button type="button" class="prev-btn">Anterior</button>
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
-            <h2>¿Preferís 1 o 2 medidas?</h2>
-            <label><input type="radio" name="medidas" value="1"> Una medida!</label>
-            <label><input type="radio" name="medidas" value="2"> Dos medidas</label>
+            <label for="altura">¿Que categoria jugas?</label>
+            <select name="" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <label for="altura">¿Preferis jugar de reves (lado izquierdo) o de drive (lado derecho)?</label>
+            
+            <select name="" id="">
+                <option value="izquierdo">Izquierdo</option>
+                <option value="derecho">Derecho</option>
+            </select>
             <button type="button" class="prev-btn">Anterior</button>
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
-            <h2>¿Qué cantidad querés llevar?</h2>
-            <label><input type="radio" name="cantidad" value="1"> El mínimo por medida (250 o 300)</label>
-            <label><input type="radio" name="cantidad" value="2"> 500 por medida</label>
-            <label><input type="radio" name="cantidad" value="3"> 1000 por medida o más</label>
+            <label for="altura">¿Te gusta mas un juego de ataque o defensa?</label>
+            <select name="" id="">
+                <option value="ataque">Ataque</option>
+                <option value="defenza">Defenza</option>
+            
+            </select>
+            <label for="altura">¿Estas buscando tener mas potencia o mas control en los golpes?</label>
+            
+            <select name="" id="">
+                <option value="potencia">Potencia</option>
+                <option value="control">Control</option>
+            </select>
             <button type="button" class="prev-btn">Anterior</button>
-            <button type="submit">Enviar</button>
+            <button type="submit">¡Conocer mi paleta ideal!</button>
         </div>
     </form>
 
