@@ -130,8 +130,7 @@ const paletas = [
         descripcion3:'Mayor potencia, ideal si no sos principiante, ya que posee menos control.',
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173664/paddleshow/gama1/diamante-removebg-preview_f0zisb.png',
         presentacion:`Paletas sin ploteo, de una marca líder mundial en fabricación.
-        Con más de 30 años de trayectoria, siempre mejorando e innovando, y exportando a todo el mundo, principalmente a España. <br/>
-        Sponsor oficial de jugadores de primera categoría internacional.
+        Con más de 30 años de trayectoria, siempre mejorando e innovando, y exportando a todo el mundo, principalmente a España.Sponsor oficial de jugadores de primera categoría internacional.
         `
     },
     gama2={
@@ -310,7 +309,7 @@ console.log(valor);
     }
 console.log(gamaSeleccionada)
     // Crea una URL para la página de resultados pasando los datos necesarios como parámetros
-    const url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}`;
+    const url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}&presentaion=${encodeURIComponent(gamaSeleccionada.presentacion)}`;
 
     console.log(url)
     // Redirige a la página de resultados

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu&display=swap');
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -48,6 +51,7 @@ body::after {
   .paletas {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
@@ -120,20 +124,35 @@ body::after {
   max-height: 200px;
   
 }
+p.oferta, p.presentacion{
+  color:#fff;
+  position: relative;
+  z-index: 90;
+  font-size: 16px;
+}
+p.presentacion{
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 40px;
+}
 @media only screen and (max-width:780px){
       .container h1{
         font-size:43px;
+        text-align: center;
+        padding: 0 10px;
     }
     .paletas{
-        flex-wrap: wrap;
+      align-items: center;
         flex-direction: column;
+    }
+    .container{
+      padding: 50px 0;
     }
     body:before{
         height: 100vh;  
     }
     .paletas .paleta{
-        width: 100%;
-        max-width: 300px;
+        width: 85%;
     }
     .paletas .paleta img{
       max-height: 300px;
@@ -161,10 +180,14 @@ body::after {
    h2{
     font-size: 28px;
    }
+   p.oferta, p.presentacion{
+    text-align: center;
+    padding: 20px;
+}
 
 }
 
-@media only screen and (min-width:780px) and (max-width:1430px){
+@media only screen and (min-width:780px) and (max-width:1030px){
 .container h1{
     font-size:43px;
 }

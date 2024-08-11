@@ -23,6 +23,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const descripcion3 = params.get('descripcion3');
         const imagen3 = params.get('imagen3');
 
+        const presentacion = params.get('presentaion');
+
         console.log(titulo1, titulo2)
 
         // Asigna los valores a los elementos correspondientes en tu HTML
@@ -40,4 +42,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.paleta:nth-child(3) p').innerHTML = descripcion3;
         document.querySelector('.paleta:nth-child(3) img').src = imagen3;
         document.querySelector('.paleta:nth-child(3) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo3}`;
+
+        document.querySelector('.presentacion').textContent = presentacion
 });
