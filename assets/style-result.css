@@ -6,9 +6,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 100vh;
+    height: 100%;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 
 body::before {
@@ -40,11 +42,16 @@ body::after {
     color: #fff;
     z-index: 54;
   }
-  
+  .container h1{
+    font-size: 63px;
+    font-weight: 400;
+  }
   .paletas {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
   }
+
   
   .paleta {
     background: #fff;
@@ -54,7 +61,15 @@ body::after {
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
-  
+  .paleta h2,  .paleta p{
+    color:#000;
+
+  }
+  .paleta img{
+    width: auto;
+    max-height: 200px;
+    
+  }
   .button {
     background: #6782FF;
     color: #fff;
@@ -63,14 +78,83 @@ body::after {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  .button-green {
-    background: #91C159;
+  .button:hover{
+    background: #5472FF;
   }
+  .button-light{
+    background: transparent;
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button-light:hover{
+    background: #fff;
+    color:#5472FF;
+  }
+
   
-  .call-to-action {
-    margin-top: 50px;
+  
+  .call-to-action1, .call-to-action2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    z-index: 99;
+    color:#fff;
   }
-  
+  .call-to-action1{
+    background-color: #91C159;
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  .call-to-action2{
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  a{
+    text-decoration: none;
+    color:inherit
+  }
+
+  div.paleta li{
+    font-size: 13px;
+    text-align: start;
+}
+
+
+
+@media only screen and (max-width:779px){
+  .container h1{
+    font-size:43px;
+}
+.paletas{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+body:before{
+    height: 100vh;  
+}
+.paleta{
+    width: 100%;
+    max-width: 300px;
+}
+}
+
+@media only screen and (min-width:780px) and (max-width:1430px){
+.container h1{
+    font-size:43px;
+}
+.paletas{
+    flex-wrap: wrap;
+}
+body{
+    height: 100%;
+}
+body:after{
+   height: auto; 
+}
+.paleta{
+    width: 100%;
+    max-width: 300px;
+}
+}
