@@ -64,11 +64,7 @@ body::after {
     color:#000;
 
   }
-  .paleta img{
-    width: auto;
-    max-height: 200px;
-    
-  }
+ 
   .button {
     background: #6782FF;
     color: #fff;
@@ -119,24 +115,53 @@ body::after {
     font-size: 13px;
     text-align: start;
 }
+.paleta img{
+  width: auto;
+  max-height: 200px;
+  
+}
+@media only screen and (max-width:780px){
+      .container h1{
+        font-size:43px;
+    }
+    .paletas{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    body:before{
+        height: 100vh;  
+    }
+    .paletas .paleta{
+        width: 100%;
+        max-width: 300px;
+    }
+    .paletas .paleta img{
+      max-height: 300px;
+    }
+    body{
+      height: 100%;
+    }
+    .call-to-action2, .call-to-action1{
+      max-height: 300px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .call-to-action2 button, .call-to-action1 button{
+      width: 100%;
+      max-width: 270px;
+    }
+    body:after, body::before{
+      height: 100%; 
+   }
+   a{
+    font-size: 20px;
+   }
+   h2{
+    font-size: 28px;
+   }
 
-
-
-@media only screen and (max-width:779px){
-  .container h1{
-    font-size:43px;
-}
-.paletas{
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-body:before{
-    height: 100vh;  
-}
-.paleta{
-    width: 100%;
-    max-width: 300px;
-}
 }
 
 @media only screen and (min-width:780px) and (max-width:1430px){
@@ -149,11 +174,14 @@ body:before{
     justify-content: center;
     align-items: center;
 }
-body:after{
-   height: auto; 
+body:after, body::before{
+  height: 100%; 
+}
+body{
+  height: 100%;
 }
 .paleta{
-    width: 85%;
+    width: 90%;
     height: auto;
     min-height: 300px;
 }
@@ -167,3 +195,4 @@ body:after{
   max-width: 200px;
 }
 }
+

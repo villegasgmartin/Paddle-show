@@ -29,15 +29,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.paleta:nth-child(1) h2').textContent = titulo1;
         document.querySelector('.paleta:nth-child(1) p').innerHTML = descripcion1;
         document.querySelector('.paleta:nth-child(1) img').src = imagen1;
-        document.querySelector('.paleta:nth-child(1) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo1} de la gama de 0 a $40000`;
+        document.querySelector('.paleta:nth-child(1) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo1}`;
 
         document.querySelector('.paleta:nth-child(2) h2').textContent = titulo2;
         document.querySelector('.paleta:nth-child(2) p').innerHTML = descripcion2;
         document.querySelector('.paleta:nth-child(2) img').src = imagen2;
-        document.querySelector('.paleta:nth-child(2) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo2} de la gama $40000 a $70000`;
+        document.querySelector('.paleta:nth-child(2) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo2} `;
 
         document.querySelector('.paleta:nth-child(3) h2').textContent = titulo3;
         document.querySelector('.paleta:nth-child(3) p').innerHTML = descripcion3;
         document.querySelector('.paleta:nth-child(3) img').src = imagen3;
-        document.querySelector('.paleta:nth-child(3) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo3} de la gama $70000 a $100000`;
+        document.querySelector('.paleta:nth-child(3) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo3}`;
 });
