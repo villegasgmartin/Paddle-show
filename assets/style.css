@@ -520,6 +520,7 @@ div.slide h4{
         overflow-x: hidden;
         width: 90%;
         overflow-y: scroll;
+        margin-bottom: 50px;
       }
       .prev-btn, button[type="submit"]{
         min-width: 200px;
