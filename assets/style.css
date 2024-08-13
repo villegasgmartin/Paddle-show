@@ -15,7 +15,9 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
+a,p, span, li, h3, h4, h5, h6, h2 {
+    font-family: "Montserrat", sans-serif;
+}
 body::before {
     content: "";
     position: absolute;
@@ -70,7 +72,7 @@ h1{
     margin-bottom: 0;
 }
 .titulo h3{
-    text-align: end;
+    text-align: start;
 }
 .items-intro{
     display: flex;
@@ -232,12 +234,7 @@ form {
     content:'$'
 }
 .slider1-p{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 90%;
-    margin: auto;
+    color:#fff;
     padding-top: 20px;
 }
 /* .slide:not(.active) {
@@ -453,7 +450,7 @@ div.slide h4{
     color:#fff;
     background-color: #91C159;
     width: 100%;
-    padding: 20px 0 20px 0;
+    padding: 20px 30px;
     position: absolute;
     bottom: 0;
   }
@@ -461,10 +458,61 @@ div.slide h4{
     text-decoration: none;
     color:inherit
   }
+
+  p.oferta{
+    color:#fff;
+    position: relative;
+    z-index: 90;
+    font-size: 16px;
+  }
+
+
+  div.consulta{
+    background: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+    width:95%;
+    height: auto;
+    max-width: 280px;
+    max-height: 450px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(0,0,0,0.5);
+    padding: 30px 20px;
+    display: none;
+    
+  }
+  div.consulta h3{
+    text-align: center;
+  }
+  div.consulta .btn-consulta{
+    width: 100%;
+    margin-top: 20px; 
+  }
+  div.consulta p{
+    font-size: 13px;
+    
+    display: block;
+  }
+  .button-transparent{
+    background: transparent;
+    color: #5472FF;
+    padding: 15px 30px;
+    border: 1px solid #5472FF;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button-transparent:hover{
+    background: #5472FF;
+    color:#fff;
+  }
   @media only screen and (max-width:780px){
     div.titulo{
-        width: 100%;
-        max-width: 100%;
+        width: 95%;
         height: auto;
         justify-content: center;
         align-items: center;
@@ -488,7 +536,7 @@ div.slide h4{
     .intro{
         margin-bottom:30px;
         padding: 30px 25px; 
-        width: 85%;
+        width: 80%;
         max-width: none;
         
     }
@@ -529,10 +577,13 @@ div.slide h4{
         margin-bottom: 0;
         margin-top: 20px;
       }
+      .slider1-p, .oferta{
+        text-align: center;
+      }
 
 }
   /*responsive*/
-  @media only screen and (min-width:780px) and (max-width:1030px){
+  @media only screen and (min-width:780px) and (max-width:1100px){
     div.titulo{
         width: 100%;
         max-width: 100%;
@@ -555,7 +606,7 @@ div.slide h4{
         padding: 20px 50px;
         
     }
-        .call-to-action1{
+    .call-to-action1{
         position: relative;
     }
     .container{

@@ -1,47 +1,82 @@
 console.log(window.location)
 window.addEventListener('DOMContentLoaded', (event) => {
-    // Verifica si estás en la página de resultados
-    
-        console.log('esto en results')
-        const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
+    const container = document.querySelector('.paletas'); // Contenedor donde se agregarán los elementos dinámicos
 
-           // Si no hay parámetros en la URL, redirige al index
-           if (!params.has('titulo1') || !params.has('descripcion1') || !params.has('imagen1')) {
-            window.location.href = 'index.html';
-            return; // Detén la ejecución del código para evitar posibles errores
-        }
+    let index = 1;
+    while (params.has(`titulo${index}`) && params.has(`descripcion${index}`) && params.has(`imagen${index}`)) {
+        const titulo = params.get(`titulo${index}`);
+        const descripcion = params.get(`descripcion${index}`);
+        const imagen = params.get(`imagen${index}`);
 
-        const titulo1 = params.get('titulo1');
-        const descripcion1 = params.get('descripcion1');
-        const imagen1 = params.get('imagen1');
+        // Crear el elemento div .paleta
+        const paletaDiv = document.createElement('div');
+        paletaDiv.classList.add('paleta');
 
-        const titulo2 = params.get('titulo2');
-        const descripcion2 = params.get('descripcion2');
-        const imagen2 = params.get('imagen2');
+        // Crear y agregar la imagen
+        const img = document.createElement('img');
+        img.src = imagen;
+        paletaDiv.appendChild(img);
 
-        const titulo3 = params.get('titulo3');
-        const descripcion3 = params.get('descripcion3');
-        const imagen3 = params.get('imagen3');
+        // Crear y agregar el título (h2)
+        const h2 = document.createElement('h2');
+        h2.textContent = titulo;
+        paletaDiv.appendChild(h2);
 
-        const presentacion = params.get('presentaion');
+        // Crear y agregar la descripción (p)
+        const p = document.createElement('p');
+        p.innerHTML = descripcion;
+        paletaDiv.appendChild(p);
 
-        console.log(titulo1, titulo2)
+        // Crear y agregar el botón de consulta
+        const button = document.createElement('button');
+        button.classList.add('button');
+        const a = document.createElement('a');
+        a.href = '#'; // Inicialmente vacío, se completará en el popup
+        a.textContent = 'Consultar';
+        a.target = '_blank';
 
-        // Asigna los valores a los elementos correspondientes en tu HTML
-        document.querySelector('.paleta:nth-child(1) h2').textContent = titulo1;
-        document.querySelector('.paleta:nth-child(1) p').innerHTML = descripcion1;
-        document.querySelector('.paleta:nth-child(1) img').src = imagen1;
-        document.querySelector('.paleta:nth-child(1) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo1}`;
+        button.appendChild(a);
+        paletaDiv.appendChild(button);
 
-        document.querySelector('.paleta:nth-child(2) h2').textContent = titulo2;
-        document.querySelector('.paleta:nth-child(2) p').innerHTML = descripcion2;
-        document.querySelector('.paleta:nth-child(2) img').src = imagen2;
-        document.querySelector('.paleta:nth-child(2) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo2} `;
+        // Agregar el div .paleta al contenedor
+        container.appendChild(paletaDiv);
 
-        document.querySelector('.paleta:nth-child(3) h2').textContent = titulo3;
-        document.querySelector('.paleta:nth-child(3) p').innerHTML = descripcion3;
-        document.querySelector('.paleta:nth-child(3) img').src = imagen3;
-        document.querySelector('.paleta:nth-child(3) a').href = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo3}`;
+        // Agregar evento para abrir el popup
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.consulta').style.display = 'block'; // Mostrar el popup
+            const h3 = document.querySelector('.consulta-form h3.paleta-seleccionada');
+            h3.textContent = titulo;
+            
 
-        document.querySelector('.presentacion').textContent = presentacion
+            // Evento para completar el enlace de WhatsApp
+            document.querySelector('.consulta-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const nombre = document.querySelector('.consulta-form input[placeholder="Nombre"]').value;
+                const localidad = document.querySelector('.consulta-form input[placeholder="Localidad"]').value;
+                const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}`;
+                window.location.href = link;
+                setTimeout(() =>{
+                    document.querySelector('.consulta').style.display = 'none';
+                }, 3000);
+
+                 
+            });
+        });
+
+        index++;
+    }
+
+    // Si no hay ningún grupo de parámetros en la URL, redirige al index
+    if (index === 1) {
+        window.location.href = 'index.html';
+    }
 });
+
+
+const cerrarpop = document.querySelector('.consulta-form button.cerrar');
+
+cerrarpop.addEventListener('click', ()=>{
+    document.querySelector('.consulta').style.display = 'none';
+} )

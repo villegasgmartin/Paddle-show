@@ -1,21 +1,25 @@
 
-
+const intro = document.querySelector('.intro');
+const form = document.querySelector('.container');
+const titulo = document.querySelector('.titulo');
 
 /*mostrar preguntas al comenzar*/
 const btnComenzar = document.querySelector('.btnComenzar');
 btnComenzar.addEventListener('click', ()=>{
-    const intro = document.querySelector('.intro');
-    const form = document.querySelector('.container');
+    
+
     intro.style.display = 'none';
     form.style.display = 'flex';
+    titulo.style.display = 'none';
+
 })
 /*volver al inicio*/
 const btnInicio = document.querySelector('.inicio');
 btnInicio.addEventListener('click', ()=>{
-    const intro = document.querySelector('.intro');
-    const form = document.querySelector('.container');
+
     intro.style.display = 'flex';
     form.style.display = 'none';
+    titulo.style.display = 'block';
 })
 
 
@@ -75,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Mostrar popup si existe
-    const popup = document.getElementById('no-results-popup');
+const popup = document.getElementById('no-results-popup');
     if (popup) {
         popup.style.display = 'block';
         document.querySelector('.close-btn').addEventListener('click', function() {
@@ -85,6 +89,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//popup consultas canchas
+const cerrarpop = document.querySelector('.consulta button.cerrar');
+const abrirpop = document.querySelector('button.canchas');
+
+abrirpop.addEventListener('click', ()=>{
+    document.querySelector('.consulta').style.display = 'block';
+} )
+
+cerrarpop.addEventListener('click', ()=>{
+    document.querySelector('.consulta').style.display = 'none';
+} )
 
 
 //rango del primer slider
@@ -92,7 +107,7 @@ const slider = document.getElementById('myRange');
 const value1 = document.getElementById('value1');
 const value2 = document.getElementById('value2');
 
-const thresholds = [40000, 70000, 100000, 110000];
+const thresholds = [40000, 70000, 100000, 300000, 350000];
 
 slider.addEventListener('input', () => {
     const sliderValue = slider.value;
@@ -101,11 +116,11 @@ slider.addEventListener('input', () => {
     let index = thresholds.findIndex(t => sliderValue <= t);
     // Asignar el valor del umbral al slider
     slider.value = thresholds[index];
-
+  
     // Actualizar los valores en pantalla
-    if (index === 3) {
+    if (index === 4) {
         value1.style.display = 'none';
-        value2.textContent = 'Más de $100000';
+        value2.textContent = 'Más de $300000';
         value2.style.width = '150px'
     } else {
         value1.style.display = 'block';
@@ -303,7 +318,10 @@ console.log(valor);
     } else if (valor <= 100000) {
         console.log('3')
         gamaSeleccionada = paletas[2];
-    } else {
+    } else if (valor <= 300000) {
+        console.log('4')
+        gamaSeleccionada = paletas[3];
+    }else if (valor <= 350000) {
         console.log('4')
         gamaSeleccionada = paletas[4];
     }

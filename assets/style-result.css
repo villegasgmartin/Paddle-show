@@ -135,6 +135,59 @@ p.presentacion{
   margin: auto;
   padding-bottom: 40px;
 }
+
+input[type=text]{
+  width: 90%;
+  border:1px solid rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+div.consulta{
+  background: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 99;
+  width:95%;
+  height: auto;
+  max-width: 280px;
+  max-height: 350px;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgba(0,0,0,0.5);
+  padding: 30px 20px;
+  display: none;
+  
+}
+div.consulta h3{
+  text-align: center;
+}
+div.consulta .btn-consulta{
+  width: 100%;
+  margin-top: 20px;
+  
+  
+}
+div.consulta span{
+  font-size: 13px;
+  
+  display: block;
+}
+.button-transparent{
+  background: transparent;
+  color: #5472FF;
+  padding: 15px 30px;
+  border: 1px solid #5472FF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-transparent:hover{
+  background: #5472FF;
+  color:#fff;
+}
+
 @media only screen and (max-width:780px){
       .container h1{
         font-size:43px;
