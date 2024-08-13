@@ -266,12 +266,37 @@ button:hover {
 }
 
 /*selects*/
-div.slide select, div.slide input[type=text]{
+div.slide input[type=text]{
     width: 100%;
     border:1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 10px;
 }
+div.slide select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+div.slide select:focus {
+    border-color: rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+@supports (-webkit-touch-callout: none) {
+    div.slide select {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 10px;
+        appearance: none; /* Quitar el estilo predeterminado */
+        -webkit-appearance: none; /* Safari */
+        -moz-appearance: none; /* Firefox */
+    }
+}
+
 div.slide label{
     font-size: 13px;
     text-align: start;
