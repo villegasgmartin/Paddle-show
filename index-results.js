@@ -10,6 +10,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const titulo = params.get(`titulo${index}`);
         const descripcion = params.get(`descripcion${index}`);
         const imagen = params.get(`imagen${index}`);
+
+           //query del form
+           const altura = params.get('altura');
+           const peso = params.get('peso');
+           const potencia = params.get('potencia');
+           const ataque = params.get('ataque');
+           const categoria = params.get('categoria');
+           const lado = params.get('lado');
         
         // Inserta h3 para marca1 antes del primer conjunto de 3 elementos
         if (index === 1 || index === 4) {
