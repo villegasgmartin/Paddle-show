@@ -43,32 +43,34 @@
     </div>
     <form id="slider-form">
         <div class="slide active slider1">
-          
-            <h4>Rango de Precios</h4>
-            <span>Indica el rango de precios que quieres invertir en tu paleta</span>
-            <div class="range-container">
-                <input type="range" min="0" max="350000" step="1000" class="range-slider" id="myRange">
-                <div class="range-values">
-                  <span id="value1"></span>
-                  <span>-</span>
-                  <span id="value2"></span>
-                </div>
-              </div>
+            <label for="altura">¿Te gusta mas un juego de ataque o defensa?</label>
+            <select name="" id="ataque">
+                <option value="ataque">Ataque</option>
+                <option value="defenza">Defensa</option>
+            
+            </select>
+            <label for="altura">¿Estas buscando tener mas potencia o mas control en los golpes?</label>
+            
+            <select name="" id="potencia">
+                <option value="potencia">Potencia</option>
+                <option value="control">Control</option>
+            </select>
+        
             <button type="button" class="prev-btn inicio">Anterior</button>
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
             <h4>Datos del Jugador</h4>
-            <label for="altura">¿Cuanto Medis? (cm)</label>
-            <input type="text" name="" id="" placeholder="Ingresa aqui tu altura">
-            <label for="altura">¿Cuanto Pesas? (kg)</label>
-            <input type="text" name="" id="" placeholder="Ingresa aqui tu peso">
+            <label for="altura">¿Cuanto Medis? (cm)*</label>
+            <input type="text" name="" id="" placeholder="Ingresa aqui tu altura" required>
+            <label for="altura">¿Cuanto Pesas? (kg)*</label>
+            <input type="text" name="" id="" placeholder="Ingresa aqui tu peso" required>
             <button type="button" class="prev-btn">Anterior</button>
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
             <label for="altura">¿Que categoria jugas?</label>
-            <select name="" id="">
+            <select name="" id="categoria">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -81,7 +83,7 @@
             </select>
             <label for="altura">¿Preferis jugar de reves (lado izquierdo) o de drive (lado derecho)?</label>
             
-            <select name="" id="">
+            <select name="" id="lado">
                 <option value="izquierdo">Izquierdo</option>
                 <option value="derecho">Derecho</option>
             </select>
@@ -89,18 +91,17 @@
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
-            <label for="altura">¿Te gusta mas un juego de ataque o defensa?</label>
-            <select name="" id="">
-                <option value="ataque">Ataque</option>
-                <option value="defenza">Defensa</option>
-            
-            </select>
-            <label for="altura">¿Estas buscando tener mas potencia o mas control en los golpes?</label>
-            
-            <select name="" id="">
-                <option value="potencia">Potencia</option>
-                <option value="control">Control</option>
-            </select>
+          
+            <h4>Rango de Precios</h4>
+            <span>Indica el rango de precios que quieres invertir en tu paleta</span>
+            <div class="range-container">
+                <input type="range" min="0" max="400000" step="1000" class="range-slider" id="myRange">
+                <div class="range-values">
+                  <span id="value1"></span>
+                  <span>-</span>
+                  <span id="value2"></span>
+                </div>
+              </div>
             <button type="button" class="prev-btn">Anterior</button>
             <button type="submit">¡Conocer mi paleta ideal!</button>
         </div>
@@ -118,6 +119,11 @@
     <button class="button canchas">¡Consultanos!</button>
    
 </div>
+<div class="call-to-action2">
+
+    <p>Te gustaría tener más energía, menos lesiones, mejorar tu salud y tu rendimiento?</p>
+    <button class="button">¡Consultanos!</button>
+</div>
 <div class="consulta">
     <h3>En paddleshow, te ofrecemos:</h3>
     <ul>
@@ -127,10 +133,32 @@
     </ul>
       
       <p>La mejor empresa de Argentina, con trabajos hechos en los clubes más grandes e importantes. Empresa familiar, que está en todos los detalles. El mejor producto, con los mejores precios del mercado</p>
-      <button class="button btn-consulta"><a href="https://wa.me/5491157202809?text=Quisiera consultar por la el servicio de canchas" target="_blank">¡Consultanos!</a></button>
-      <button type="button" class="button-transparent btn-consulta cerrar"><a href="" target="_blank"></a>Cerrar</button>
+      <form class="form-canchas">
+        <label for="altura">Nombre*</label>
+        <input type="text" name="" id="" placeholder="Nombre" required>
+        <label for="altura">Localidad*</label>
+        <input type="text" name="" id="" placeholder="Localidad" required>
+        <label for="altura">Nombre de Cancha*</label>
+        <input type="text" name="" id="" placeholder="Nombre de Cancha" required>
+        <button class="button btn-consulta" type="submit"><a href="" 
+    target="_blank">¡Consultanos!</a></button>
+    <button type="button" class="button-transparent btn-consulta cerrar"><a href="" target="_blank"></a>Cerrar</button>
+      </form>
+       
+     
 </div>
-
+<div class="consulta-medica">
+    <h3>Mirá de qué se trata y transformá tu juego y tu vida.</h3>
+    <ul>
+        <li>Rendí al máximo, dentro y fuera de la cancha.</li>
+        <li>Tu salud y rendimiento físico son la clave para disfrutar de lo que más te apasiona.</li>
+        <li>Potenciá tu vida para que juegues al pádel con más energía y menos lesiones.</li>
+    </ul>
+     <button class="button btn-consulta-medica"><a href="https://wa.me/5491157202809?text=Quisiera consultar por el servicio medico" 
+    target="_blank">¡Consultanos!</a></button>
+    <button type="button" class="button-transparent btn-consulta-medica cerrar-medico"><a href="" target="_blank"></a>Cerrar</button>      
+     
+</div>
 
 
     <script src="index.js"></script>

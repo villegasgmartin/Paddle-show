@@ -9,6 +9,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const descripcion = params.get(`descripcion${index}`);
         const imagen = params.get(`imagen${index}`);
 
+
+        //query del form
+        const altura = params.get('altura');
+        const peso = params.get('peso');
+        const potencia = params.get('potencia');
+        const ataque = params.get('ataque');
+        const categoria = params.get('categoria');
+        const lado = params.get('lado');
+
         // Crear el elemento div .paleta
         const paletaDiv = document.createElement('div');
         paletaDiv.classList.add('paleta');
@@ -55,7 +64,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 e.preventDefault();
                 const nombre = document.querySelector('.consulta-form input[placeholder="Nombre"]').value;
                 const localidad = document.querySelector('.consulta-form input[placeholder="Localidad"]').value;
-                const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}`;
+                const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}, juego en la categoria ${categoria}, prefiero jugar del lado ${lado}, me gusta mas el/la ${ataque}, busco mejorar mi ${potencia}, mido ${altura} cm y peso ${peso} Kg`;
                 window.location.href = link;
                 setTimeout(() =>{
                     document.querySelector('.consulta').style.display = 'none';
@@ -80,3 +89,33 @@ const cerrarpop = document.querySelector('.consulta-form button.cerrar');
 cerrarpop.addEventListener('click', ()=>{
     document.querySelector('.consulta').style.display = 'none';
 } )
+
+const cerrarpopOtra = document.querySelector('.consulta-otra button.cerrar');
+
+cerrarpopOtra.addEventListener('click', ()=>{
+    document.querySelector('.consulta-otra').style.display = 'none';
+} )
+
+
+const abrirOtraConsulta = document.querySelector('.call-to-action1 button')
+abrirOtraConsulta.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.consulta-otra').style.display = 'block'; // Mostrar el popup  
+
+    // Evento para completar el enlace de WhatsApp
+    document.querySelector('.consulta-otra').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nombre = document.querySelector('.consulta-form-otra input[placeholder="Nombre"]').value;
+        const localidad = document.querySelector('.consulta-form-otra input[placeholder="Localidad"]').value;
+        const marca = document.querySelector('.consulta-form-otra input[placeholder="Marca"]').value;
+        const modelo = document.querySelector('.consulta-form-otra input[placeholder="Modelo"]').value;
+    
+        const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta marca ${marca} y modelo ${modelo} mi nombre es ${nombre} y vivo en ${localidad}`;
+        window.location.href = link;
+        setTimeout(() =>{
+            document.querySelector('.consulta-otra').style.display = 'none';
+        }, 3000);
+
+         
+    });
+})
