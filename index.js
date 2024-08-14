@@ -2,7 +2,7 @@
 const intro = document.querySelector('.intro');
 const form = document.querySelector('.container');
 const titulo = document.querySelector('.titulo');
-
+const containerform = document.querySelector('.container-form');
 /*mostrar preguntas al comenzar*/
 const btnComenzar = document.querySelector('.btnComenzar');
 btnComenzar.addEventListener('click', ()=>{
@@ -11,6 +11,7 @@ btnComenzar.addEventListener('click', ()=>{
     intro.style.display = 'none';
     form.style.display = 'flex';
     titulo.style.display = 'none';
+    containerform.classList.add('margin-top');
 
 })
 /*volver al inicio*/
@@ -20,6 +21,7 @@ btnInicio.addEventListener('click', ()=>{
     intro.style.display = 'flex';
     form.style.display = 'none';
     titulo.style.display = 'block';
+    containerform.classList.remove('margin-top');
 })
 
 

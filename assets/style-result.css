@@ -229,6 +229,7 @@ div.consulta-otra input, div.consulta-otra label{
     .call-to-action2 button, .call-to-action1 button{
       width: 100%;
       max-width: 270px;
+      margin-bottom: 20px;
     }
     body:after, body::before{
       height: 100%; 

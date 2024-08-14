@@ -612,6 +612,9 @@ div.slide h4{
         gap:0px;
         height: auto;
         align-items: stretch;
+        
+    }
+    .margin-top{
         margin-top:120px;
     }
     .intro{
