@@ -110,7 +110,7 @@ document.querySelector('.form-canchas').addEventListener('submit', (e) => {
     const nombre = document.querySelector('.form-canchas input[placeholder="Nombre"]').value;
     const localidad = document.querySelector('.form-canchas input[placeholder="Localidad"]').value;
     const cancha = document.querySelector('.form-canchas input[placeholder="Nombre de Cancha"]').value;
-    const link = `https://wa.me/5491157202809?text=Quisiera consultar por la el servicio de canchas, mi nombre es ${nombre} y vivo en ${localidad} y la cancha es ${cancha}`;
+    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quiero consultar por el servicio de canchas, mi nombre es ${nombre} y vivo en ${localidad} y mi club es ${cancha}`;
     window.location.href = link;
     setTimeout(() =>{
         document.querySelector('.consulta').style.display = 'none';
@@ -129,6 +129,22 @@ abrirpopMedico.addEventListener('click', ()=>{
 cerrarpopMedico.addEventListener('click', ()=>{
     document.querySelector('.consulta-medica').style.display = 'none';
 } )
+
+document.querySelector('.form-salud').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    
+    const nombre = document.querySelector('.form-salud input[placeholder="Nombre"]').value;
+    const localidad = document.querySelector('.form-salud input[placeholder="Localidad"]').value;
+  
+    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Mi nombre e ${nombre} y vivo en ${localidad} y quiero potenciar mi salud.`;
+    window.location.href = link;
+    setTimeout(() =>{
+        document.querySelector('.consulta-medica').style.display = 'none';
+    }, 2000);
+
+     
+});
 
 //rango del primer slider
 const slider = document.getElementById('myRange');
@@ -345,7 +361,9 @@ const paletas = [
             <li>Ideal si deseás una paleta que te permita atacar con eficacia, sin sacrificar el control y la precisión. </li>
 
         </ul>`,
-        imagen5:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723605466/paddleshow/gama4/Grapheno_Speed_9__1_-removebg-preview_zzllgk.png'
+        imagen5:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723605466/paddleshow/gama4/Grapheno_Speed_9__1_-removebg-preview_zzllgk.png',
+        marca1:'Fg',
+        marca2:'Vairo'
     },
     gama5={
         titulo1:'ML10 Pro Cup 3k Luxury 2024',
@@ -431,7 +449,9 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
             <li>Es ideal si buscas dominar tu juego de potencia, sin perder control. </li>
 
         </ul>`,
-        imagen6:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723606271/paddleshow/gama5/Vertex_03_2023-removebg-preview_ceijyx.png'
+        imagen6:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723606271/paddleshow/gama5/Vertex_03_2023-removebg-preview_ceijyx.png', 
+        marca1:'Nox',
+        marca2:'Bullpadel'
     }
 ]
 
@@ -482,7 +502,7 @@ console.log(gamaSeleccionada)
     let url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}&presentacion=${encodeURIComponent(gamaSeleccionada.presentacion)}&altura=${encodeURIComponent(altura)}&peso=${encodeURIComponent(peso)}&potencia=${encodeURIComponent(potencia)}&ataque=${encodeURIComponent(ataque)}&categoria=${encodeURIComponent(categoria)}&lado=${encodeURIComponent(lado)}`;
 
     if (gamaSeleccionada === paletas[3] || gamaSeleccionada === paletas[4]) {
-        url += `&titulo4=${encodeURIComponent(gamaSeleccionada.titulo4)}&descripcion4=${encodeURIComponent(gamaSeleccionada.descripcion4)}&imagen4=${encodeURIComponent(gamaSeleccionada.imagen4)}&titulo5=${encodeURIComponent(gamaSeleccionada.titulo5)}&descripcion5=${encodeURIComponent(gamaSeleccionada.descripcion5)}&imagen5=${encodeURIComponent(gamaSeleccionada.imagen5)}`;
+        url += `&titulo4=${encodeURIComponent(gamaSeleccionada.titulo4)}&descripcion4=${encodeURIComponent(gamaSeleccionada.descripcion4)}&imagen4=${encodeURIComponent(gamaSeleccionada.imagen4)}&titulo5=${encodeURIComponent(gamaSeleccionada.titulo5)}&descripcion5=${encodeURIComponent(gamaSeleccionada.descripcion5)}&imagen5=${encodeURIComponent(gamaSeleccionada.imagen5)}&marca1=${encodeURIComponent(gamaSeleccionada.marca1)}&marca2=${encodeURIComponent(gamaSeleccionada.marca2)}`;
     }
     
     if (gamaSeleccionada === paletas[4]) {

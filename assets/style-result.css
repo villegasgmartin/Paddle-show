@@ -190,7 +190,11 @@ div.consulta-otra input, div.consulta-otra label{
   background: #5472FF;
   color:#fff;
 }
-
+.paletas h3{
+  width: 100%;
+  font-size: 42px;
+  margin: 0;
+}
 @media only screen and (max-width:780px){
       .container h1{
         font-size:43px;

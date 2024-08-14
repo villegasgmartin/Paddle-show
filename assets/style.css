@@ -64,7 +64,7 @@ img.logo{
 }
 h1{
     font-size: 60px;
-    margin-top: 100px;
+    
     font-weight: 500;
     text-align: start;
     font-family: "Montserrat", sans-serif;
@@ -73,6 +73,7 @@ h1{
 }
 .titulo h3{
     text-align: start;
+    margin-top: 100px;
 }
 .items-intro{
     display: flex;
@@ -135,10 +136,10 @@ h1{
 
 
 .container {
-    padding: 50px;
+    padding: 50px 40px;
     width: 50%;
     height: auto;
-    max-width: 400px;
+    max-width: 515px;
     max-height: 500px;
     min-height: 350px;
     display: none;
@@ -235,8 +236,11 @@ form {
     content:'$'
 }
 .slider1-p{
-    color:#fff;
+    color:#000;
     padding-top: 20px;
+    font-size: 14px;
+    margin-top: 0;
+    padding-top: 0;
 }
 /* .slide:not(.active) {
     display: none;
@@ -267,7 +271,7 @@ button:hover {
 }
 
 /*selects*/
-div.slide input[type=text], .form-canchas input{
+div.slide input[type=text], .form-canchas input, .form-salud input{
     width: 90%;
     border:1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -302,6 +306,7 @@ div.slide label{
     font-size: 15px;
     text-align: start;
     font-weight: 500;
+    color:#000
 }
 div.slide{
     text-align: center;
@@ -549,7 +554,7 @@ div.slide h4{
     width:90%;
     height: auto;
     max-width: 400px;
-    max-height: 400px;
+    max-height: 550px;
     border-radius: 10px;
     box-shadow: 3px 3px rgba(0,0,0,0.5);
     padding: 30px 20px 0;
@@ -561,7 +566,7 @@ div.slide h4{
     text-align: start;
   }
 
-  .form-canchas{
+  .form-canchas, .form-salud {
     display: flex;
     flex-direction: column;
   }
@@ -651,6 +656,7 @@ div.slide h4{
         justify-content: center;
         overflow-x: hidden;
         width: 90%;
+        max-width: 400px;
         overflow-y: scroll;
         margin-bottom: 50px;
       }
@@ -667,7 +673,7 @@ div.slide h4{
       div.consulta{
         max-width: 95%;
       }
-      .form-canchas{
+      .form-canchas, .form-salud{
         width: 90%;
         margin: auto;
       }
