@@ -211,30 +211,52 @@ form {
     padding-bottom: 10px;
 }
 .range-container {
-    width: 300px;
-    margin: 20px auto;
-  }
-  
-  .range-slider {
+    position: relative;
     width: 100%;
-  }
-  
-  .range-values {
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.range-slider {
+    width: 100%;
+}
+
+.range-values {
     display: flex;
     justify-content: space-between;
-    opacity: 1; 
-  }
+    opacity: 1;
+    margin-top: 40px;
+}
 
-  #value1, #value2{
+#value1, #value2 {
     width: 80px;
     padding: 10px;
-    border:1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
-    color:rgba(0,0,0,0.4);   
+    color: rgba(0,0,0,0.4);
 }
-#value1:before, #value2:before{
-    content:'$'
+
+#value1:before, #value2:before {
+    content: '$';
 }
+
+.range-marks {
+    position: absolute;
+    top: 20px; /* Ajusta la posición de las marcas */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    pointer-events: none;
+}
+
+.range-marks .mark {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
 .slider1-p{
     color:#000;
     padding-top: 20px;

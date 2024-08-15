@@ -93,20 +93,27 @@
             <button type="button" class="next-btn">Siguiente</button>
         </div>
         <div class="slide">
-          
             <h4>Rango de Precios</h4>
             <span>Indica el rango de precios que quieres invertir en tu paleta</span>
             <div class="range-container">
                 <input type="range" min="0" max="400000" step="1000" class="range-slider" id="myRange">
                 <div class="range-values">
-                  <span id="value1"></span>
-                  <span>-</span>
-                  <span id="value2"></span>
+                    <span id="value1"></span>
+                    <span>-</span>
+                    <span id="value2"></span>
                 </div>
-              </div>
+                <div class="range-marks">
+                    <span class="mark" style="left: 10%;"></span>    <!-- 40000 -->
+                    <span class="mark" style="left: 17.5%;"></span>  <!-- 70000 -->
+                    <span class="mark" style="left: 25%;"></span>    <!-- 100000 -->
+                    <span class="mark" style="left: 75%;"></span>    <!-- 300000 -->
+                    <span class="mark" style="left: 100%;"></span>   <!-- 400000 -->
+                </div>
+            </div>
             <button type="button" class="prev-btn">Anterior</button>
             <button type="submit">¡Conocer mi paleta ideal!</button>
         </div>
+        
     </form>
 
     </form>

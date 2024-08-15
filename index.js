@@ -146,33 +146,40 @@ document.querySelector('.form-salud').addEventListener('submit', (e) => {
      
 });
 
-//rango del primer slider
 const slider = document.getElementById('myRange');
 const value1 = document.getElementById('value1');
 const value2 = document.getElementById('value2');
 
 const thresholds = [40000, 70000, 100000, 300000, 400000];
 
+// Establecer el valor inicial del slider y actualizar los valores mostrados
+slider.value = thresholds[0];
+value1.textContent = 0;
+value2.textContent = thresholds[0];
+
 slider.addEventListener('input', () => {
-    const sliderValue = slider.value;
+    const sliderValue = parseInt(slider.value, 10);
 
     // Encontrar el índice del umbral más cercano
     let index = thresholds.findIndex(t => sliderValue <= t);
-    // Asignar el valor del umbral al slider
+    if (index === -1) index = thresholds.length - 1;
+
+    // Ajustar el valor del slider al umbral más cercano
     slider.value = thresholds[index];
   
     // Actualizar los valores en pantalla
-    if (index === 4) {
+    if (index === thresholds.length - 1) {
         value1.style.display = 'none';
-        value2.textContent = 'Más de $300001';
-        value2.style.width = '150px'
+        value2.textContent = `Más de $${thresholds[thresholds.length - 2] + 1}`;
+        value2.style.width = '150px';
     } else {
         value1.style.display = 'block';
-        value2.style.width = '80px'
+        value2.style.width = '80px';
         value1.textContent = thresholds[index - 1] || 0;
         value2.textContent = thresholds[index];
     }
 });
+
 
 
 //logica de resultado
