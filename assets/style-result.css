@@ -63,6 +63,9 @@ body::after {
     text-align: center;
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .paleta h2,  .paleta p{
     color:#000;
@@ -121,7 +124,8 @@ body::after {
 }
 .paleta img{
   width: auto;
-  max-height: 200px;
+  max-height: 250px;
+  object-fit: contain;
   
 }
 p.oferta, p.presentacion{
