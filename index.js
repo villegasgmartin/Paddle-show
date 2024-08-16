@@ -1,8 +1,9 @@
 
 const intro = document.querySelector('.intro');
 const form = document.querySelector('.container');
-const titulo = document.querySelector('.titulo');
+const titulo = document.querySelector('.texto-principal');
 const containerform = document.querySelector('.container-form');
+const textform = document.querySelector('.texto-form');
 /*mostrar preguntas al comenzar*/
 const btnComenzar = document.querySelector('.btnComenzar');
 btnComenzar.addEventListener('click', ()=>{
@@ -12,6 +13,7 @@ btnComenzar.addEventListener('click', ()=>{
     form.style.display = 'flex';
     titulo.style.display = 'none';
     containerform.classList.add('margin-top');
+    textform.style.display = 'block';
 
 })
 /*volver al inicio*/
@@ -22,6 +24,7 @@ btnInicio.addEventListener('click', ()=>{
     form.style.display = 'none';
     titulo.style.display = 'block';
     containerform.classList.remove('margin-top');
+    textform.style.display = 'none';
 })
 
 
@@ -110,7 +113,7 @@ document.querySelector('.form-canchas').addEventListener('submit', (e) => {
     const nombre = document.querySelector('.form-canchas input[placeholder="Nombre"]').value;
     const localidad = document.querySelector('.form-canchas input[placeholder="Localidad"]').value;
     const cancha = document.querySelector('.form-canchas input[placeholder="Nombre de Cancha"]').value;
-    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quiero consultar por el servicio de canchas, mi nombre es ${nombre} y vivo en ${localidad} y mi club es ${cancha}`;
+    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quiero consultar por el servicio de canchas, mi nombre es ${nombre}, vivo en ${localidad} y mi club es ${cancha}`;
     window.location.href = link;
     setTimeout(() =>{
         document.querySelector('.consulta').style.display = 'none';
@@ -137,7 +140,7 @@ document.querySelector('.form-salud').addEventListener('submit', (e) => {
     const nombre = document.querySelector('.form-salud input[placeholder="Nombre"]').value;
     const localidad = document.querySelector('.form-salud input[placeholder="Localidad"]').value;
   
-    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Mi nombre e ${nombre} y vivo en ${localidad} y quiero potenciar mi salud.`;
+    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Mi nombre e ${nombre}, vivo en ${localidad} y quiero potenciar mi salud.`;
     window.location.href = link;
     setTimeout(() =>{
         document.querySelector('.consulta-medica').style.display = 'none';
