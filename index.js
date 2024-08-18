@@ -198,9 +198,26 @@ const paletas = [
         titulo3:'Diamante',
         descripcion3:'Mayor potencia, ideal si no sos principiante, ya que posee menos control.',
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173664/paddleshow/gama1/diamante-removebg-preview_f0zisb.png',
-        presentacion:`Paletas sin ploteo, de una marca líder mundial en fabricación.
+        presentacionSin_Ploteo:`Paletas sin ploteo, de una marca líder mundial en fabricación.
         Con más de 30 años de trayectoria, siempre mejorando e innovando, y exportando a todo el mundo, principalmente a España.Sponsor oficial de jugadores de primera categoría internacional.
-        `
+        `,
+        marca1:'Sin_Ploteo',
+        titulo4:'Fg Black Equilibrium',
+        descripcion4:`
+        <ul>
+        <li>Formato gota: buen equilibrio entre potencia y control.</li>
+        <li>Marco reforzado con carbono, para mayor durabilidad.</li>
+        <li>Puente horizontal para anti vibración y más control. Hace una pala más sólida y te protege el brazo de la vibración de los golpes.</li>
+        <li>Ideal para un juego equilibrado, por su excelente relación entre potencia y control.Para jugadores principiantes por su facilidad de uso.</li>
+        </ul>
+
+        `,
+        imagen4:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723948865/paddleshow/gama1/Fg_Black_Equilibrium_marco_carbono-removebg-preview_xifoqr.png',
+        presentacionFg:`Paletas sin ploteo, de una marca líder mundial en fabricación.
+        Con más de 30 años de trayectoria, siempre mejorando e innovando, y exportando a todo el mundo, principalmente a España.Sponsor oficial de jugadores de primera categoría internacional.
+        `,
+        marca2:'Fg',
+        gama:'gama1'
     },
     gama2={
         titulo1:'Cigio Nepal',
@@ -248,7 +265,9 @@ const paletas = [
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173780/paddleshow/gama2/Diamante_1_hvaptz.jpg',
         presentacion:`Cigio es el último lanzamiento de una de las fábricas más importantes de Argentina, con más de 15 años de trayectoria. 
     Lo mejor en diseño, calidad y precio para su gama.
-    `
+    `,
+    marca1:'Cigio',
+    gama:'gama2'
     },
     gama3={
         titulo1:'Bullpadel',
@@ -303,7 +322,13 @@ const paletas = [
             
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173911/paddleshow/gama3/Magnus_Hans_Diamante-removebg-preview_w0eova.png',
-        presentacion:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.'
+        presentacionBullpadel:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
+        presentacionHead:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
+        presentacionMagnus:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
+        marca1:'Bullpadel',
+        marca2:'Head',
+        marca3:'Magnus',
+        gama:'gama3'
     },
     gama4={
         titulo1:'Fg Black Control 12k',
@@ -346,7 +371,8 @@ const paletas = [
         
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723174034/paddleshow/gama4/Fg_Black_Power_12k-removebg-preview_tledwi.png',
-        presentacion:'Fg es la marca propia de la fábrica más importante de Argentina, con más de 30 años de trayectoria. Exporta paletas a todo el mundo, principalmente a España, débito a sus altos estándares de calidad. Es lo mejor en relación precio calidad en esta gama a tal punto que los creadores de PaddleShow, teniendo acceso a todas las marcas, preferimos usar Fg. Es una marca que está creciendo muy rápido, porque además de su calidad y excelente precio, invierte constantemente en sponsorear y apoyar jugadores de primera categoría.',
+        presentacionFg:'Fg es la marca propia de la fábrica más importante de Argentina, con más de 30 años de trayectoria. Exporta paletas a todo el mundo, principalmente a España, débito a sus altos estándares de calidad. Es lo mejor en relación precio calidad en esta gama a tal punto que los creadores de PaddleShow, teniendo acceso a todas las marcas, preferimos usar Fg. Es una marca que está creciendo muy rápido, porque además de su calidad y excelente precio, invierte constantemente en sponsorear y apoyar jugadores de primera categoría.',
+        presentacionVairo:'Es reconocida por sus paletas de alta durabilidad y rendimiento, utilizando materiales premium y fabricando con estándares internacionales, exportando a todo el mundo, incluído España.Con más de 30 años en el mercado, Vairo es una marca argentina de confianza, respaldada por su historia y patrocinio de jugadores de élite.',
         titulo4:'Vairo Grapheno Confort 9.1',
         descripcion4:`<ul>
             <li>Formato: Redondo. Ofrece un punto dulce más amplio, facilitando el control y la manejabilidad.</li>
@@ -373,7 +399,8 @@ const paletas = [
         </ul>`,
         imagen5:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723605466/paddleshow/gama4/Grapheno_Speed_9__1_-removebg-preview_zzllgk.png',
         marca1:'Fg',
-        marca2:'Vairo'
+        marca2:'Vairo',
+        gama:'gama4'
     },
     gama5={
         titulo1:'ML10 Pro Cup 3k Luxury 2024',
@@ -461,7 +488,10 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
         </ul>`,
         imagen6:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723606271/paddleshow/gama5/Vertex_03_2023-removebg-preview_ceijyx.png', 
         marca1:'Nox',
-        marca2:'Bullpadel'
+        marca2:'Bullpadel',
+        gama:'gama5',
+        presentacionNox: 'Marca líder mundial utilizada por jugadores top como Agustín Tapia, Miguel Lamperti y Tino Libaak, entre muchos.*Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.',
+        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos.*Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.'
     }
 ]
 
@@ -472,18 +502,16 @@ const submit = document.querySelector('button[type=submit]');
 
 submit.addEventListener('click', (event) => {
     event.preventDefault();
-    //datos del form
-    const altura = document.querySelector('#slider-form input[placeholder="Ingresa aqui tu altura"').value;
-    const peso = document.querySelector('#slider-form input[placeholder="Ingresa aqui tu peso"').value;
+    // Datos del formulario
+    const altura = document.querySelector('#slider-form input[placeholder="Ingresa aqui tu altura"]').value;
+    const peso = document.querySelector('#slider-form input[placeholder="Ingresa aqui tu peso"]').value;
     const potencia = document.querySelector('#slider-form #potencia').value;
     const ataque = document.querySelector('#slider-form #ataque').value;
     const categoria = document.querySelector('#slider-form #categoria').value;
     const lado = document.querySelector('#slider-form #lado').value;
 
-
-
     const valor = parseInt(value2.textContent.replace(/\D/g, ''), 10); // Obtén el valor como número
-console.log(valor);
+    console.log(valor);
     let gamaSeleccionada;
 
     // Determina la gama en función del valor del rango
@@ -499,33 +527,37 @@ console.log(valor);
     } else if (valor <= 300000) {
         console.log('4')
         gamaSeleccionada = paletas[3];
-    }else if (valor <= 350000) {
-        console.log('4')
+    } else if (valor <= 350000) {
+        console.log('5')
         gamaSeleccionada = paletas[4];
     }
-console.log(gamaSeleccionada)
+    console.log(gamaSeleccionada);
 
     if (!altura || !peso || !valor) {
-        return alert('Complete todos los datos para continuar la consulta')
+        return alert('Complete todos los datos para continuar la consulta');
     }
-    // Crea una URL para la página de resultados pasando los datos necesarios como parámetros
-    let url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}&presentacion=${encodeURIComponent(gamaSeleccionada.presentacion)}&altura=${encodeURIComponent(altura)}&peso=${encodeURIComponent(peso)}&potencia=${encodeURIComponent(potencia)}&ataque=${encodeURIComponent(ataque)}&categoria=${encodeURIComponent(categoria)}&lado=${encodeURIComponent(lado)}`;
 
-    if (gamaSeleccionada === paletas[3] || gamaSeleccionada === paletas[4]) {
-        url += `&titulo4=${encodeURIComponent(gamaSeleccionada.titulo4)}&descripcion4=${encodeURIComponent(gamaSeleccionada.descripcion4)}&imagen4=${encodeURIComponent(gamaSeleccionada.imagen4)}&titulo5=${encodeURIComponent(gamaSeleccionada.titulo5)}&descripcion5=${encodeURIComponent(gamaSeleccionada.descripcion5)}&imagen5=${encodeURIComponent(gamaSeleccionada.imagen5)}&marca1=${encodeURIComponent(gamaSeleccionada.marca1)}&marca2=${encodeURIComponent(gamaSeleccionada.marca2)}`;
+    // Crea la URL para la página de resultados pasando los datos necesarios como parámetros
+    let url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}&altura=${encodeURIComponent(altura)}&peso=${encodeURIComponent(peso)}&potencia=${encodeURIComponent(potencia)}&ataque=${encodeURIComponent(ataque)}&categoria=${encodeURIComponent(categoria)}&lado=${encodeURIComponent(lado)}&marca1=${encodeURIComponent(gamaSeleccionada.marca1)}&presentacion${gamaSeleccionada.marca1}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca1])}&gama=${encodeURIComponent(gamaSeleccionada.gama)}`;
+
+    if (gamaSeleccionada === paletas[0]){
+        url += `&titulo4=${encodeURIComponent(gamaSeleccionada.titulo4)}&descripcion4=${encodeURIComponent(gamaSeleccionada.descripcion4)}&imagen4=${encodeURIComponent(gamaSeleccionada.imagen4)}&marca2=${encodeURIComponent(gamaSeleccionada.marca2)}&presentacion${gamaSeleccionada.marca2}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca2])}`;
+    }
+    if (gamaSeleccionada === paletas[3] || gamaSeleccionada === paletas[4] ) {
+        url += `&titulo4=${encodeURIComponent(gamaSeleccionada.titulo4)}&descripcion4=${encodeURIComponent(gamaSeleccionada.descripcion4)}&imagen4=${encodeURIComponent(gamaSeleccionada.imagen4)}&titulo5=${encodeURIComponent(gamaSeleccionada.titulo5)}&descripcion5=${encodeURIComponent(gamaSeleccionada.descripcion5)}&imagen5=${encodeURIComponent(gamaSeleccionada.imagen5)}&marca2=${encodeURIComponent(gamaSeleccionada.marca2)}&presentacion${gamaSeleccionada.marca2}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca2])}`;
     }
     
     if (gamaSeleccionada === paletas[4]) {
         url += `&titulo6=${encodeURIComponent(gamaSeleccionada.titulo6)}&descripcion6=${encodeURIComponent(gamaSeleccionada.descripcion6)}&imagen6=${encodeURIComponent(gamaSeleccionada.imagen6)}`;
     }
-    
+
+    if (gamaSeleccionada === paletas[2]) {
+        url += `&marca2=${encodeURIComponent(gamaSeleccionada.marca2)}&marca3=${encodeURIComponent(gamaSeleccionada.marca3)}&presentacion${gamaSeleccionada.marca3}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca3])}&presentacion${gamaSeleccionada.marca2}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca2])}`;;
+    }
+
     // Redirecciona a la URL creada
-    window.location.href = url;
-
-
-    console.log(url)
-    // Redirige a la página de resultados
-    window.location.href = url; // Esto recarga la página en la nueva ubicación
+    console.log(url);
+    window.location.href = url; // Redirige a la página de resultados
 });
 
 

@@ -620,6 +620,22 @@ div.slide h4{
     background: #5472FF;
     color:#fff;
   }
+  .flecha{
+    transform: rotate(90deg);
+    width: 60px;
+    height: auto;
+    margin-top: 15px;
+    display: none;
+  }
+  .instagram{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .call-to-action2 div{
+    display: flex;
+  }
   @media only screen and (max-width:780px){
     div.titulo{
         width: 95%;
@@ -701,6 +717,9 @@ div.slide h4{
       .form-canchas, .form-salud{
         width: 90%;
         margin: auto;
+      }
+      .flecha{
+        display: block;
       }
 
 }

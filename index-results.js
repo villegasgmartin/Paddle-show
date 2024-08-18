@@ -1,36 +1,60 @@
-console.log(window.location)
+
 window.addEventListener('DOMContentLoaded', (event) => {
     const params = new URLSearchParams(window.location.search);
-    const container = document.querySelector('.paletas'); // Contenedor donde se agregarán los elementos dinámicos
+    const container = document.querySelector('.paletas');
+    const pPresentacion = document.querySelector('.presentacion');
+    const btnmarcas = document.querySelector('.botones');
 
     let index = 1;
-    let marcaIndex = 1; // Índice para las marcas
+    let marcaIndex = 1;
 
     while (params.has(`titulo${index}`) && params.has(`descripcion${index}`) && params.has(`imagen${index}`)) {
         const titulo = params.get(`titulo${index}`);
         const descripcion = params.get(`descripcion${index}`);
         const imagen = params.get(`imagen${index}`);
+        const gama = params.get(`gama`);
 
-           //query del form
-           const altura = params.get('altura');
-           const peso = params.get('peso');
-           const potencia = params.get('potencia');
-           const ataque = params.get('ataque');
-           const categoria = params.get('categoria');
-           const lado = params.get('lado');
-        
-        // Inserta h3 para marca1 antes del primer conjunto de 3 elementos
-        if (index === 1 || index === 4) {
+        // Manejar las presentaciones de las marcas
+        if (gama == 'gama3' && (index === 1 || index === 2 || index === 3)) {
             const marca = params.get(`marca${marcaIndex}`);
-            const h3 = document.createElement('h3');
-            h3.textContent = marca;
-            container.appendChild(h3);
-            marcaIndex++; // Incrementa el índice de marca para la próxima iteración
+            if (marca) {
+                const divbtn = document.createElement('div');
+                divbtn.classList.add('button-container');
+                
+                const button = document.createElement('button');
+                button.textContent = marca;
+                button.classList.add('button');
+                button.dataset.marca = marca;
+                button.dataset.presentacion = params.get(`presentacion${marca}`); // Almacenar la presentación en el botón
+                
+                divbtn.appendChild(button);
+                btnmarcas.appendChild(divbtn);
+            }
+            marcaIndex++;
+        }
+
+        if (index === 1 || (index === 4 && gama != 'gama3')) {
+            const marca = params.get(`marca${marcaIndex}`);
+            if (marca) {
+                const divbtn = document.createElement('div');
+                divbtn.classList.add('button-container');
+                
+                const button = document.createElement('button');
+                button.textContent = marca;
+                button.classList.add('button');
+                button.dataset.marca = marca;
+                button.dataset.presentacion = params.get(`presentacion${marca}`); // Almacenar la presentación en el botón
+                
+                divbtn.appendChild(button);
+                btnmarcas.appendChild(divbtn);
+            }
+            marcaIndex++;
         }
 
         // Crear el elemento div .paleta
         const paletaDiv = document.createElement('div');
         paletaDiv.classList.add('paleta');
+        paletaDiv.dataset.marca = gama === 'gama3' ? params.get(`marca${Math.ceil(index)}`) : params.get(`marca${Math.ceil(index / 3)}`);
 
         // Crear y agregar la imagen
         const img = document.createElement('img');
@@ -48,31 +72,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
         paletaDiv.appendChild(p);
 
         // Crear y agregar el botón de consulta
-        const button = document.createElement('button');
-        button.classList.add('button');
+        const buttonConsulta = document.createElement('button');
+        buttonConsulta.classList.add('button');
         const a = document.createElement('a');
-        a.href = '#'; // Inicialmente vacío, se completará en el popup
+        a.href = '#';
         a.textContent = 'Consultar';
         a.target = '_blank';
 
-        button.appendChild(a);
-        paletaDiv.appendChild(button);
+        buttonConsulta.appendChild(a);
+        paletaDiv.appendChild(buttonConsulta);
 
-        // Agregar el div .paleta al contenedor
+        // Agregar el div .paleta al contenedor y ocultarlo inicialmente
+        paletaDiv.style.display = 'none';
         container.appendChild(paletaDiv);
 
         // Agregar evento para abrir el popup
-        button.addEventListener('click', (e) => {
+        buttonConsulta.addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelector('.consulta').style.display = 'block'; // Mostrar el popup
+            document.querySelector('.consulta').style.display = 'block';
             const h3 = document.querySelector('.consulta-form h3.paleta-seleccionada');
             h3.textContent = titulo;
-            
+
             document.querySelector('.consulta-form').addEventListener('submit', (e) => {
                 e.preventDefault();
                 const nombre = document.querySelector('.consulta-form input[placeholder="Nombre"]').value;
                 const localidad = document.querySelector('.consulta-form input[placeholder="Localidad"]').value;
-                const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}, juego en la categoria ${categoria}, prefiero jugar del lado ${lado}, me gusta mas el/la ${ataque}, busco mejorar mi ${potencia}, mido ${altura} cm y peso ${peso} Kg`;
+                const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}`;
                 window.location.href = link;
                 setTimeout(() => {
                     document.querySelector('.consulta').style.display = 'none';
@@ -83,11 +108,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
         index++;
     }
 
-    // Si no hay ningún grupo de parámetros en la URL, redirige al index
+    // Event listeners para los botones de marcas
+    const marcaButtons = document.querySelectorAll('.button');
+    marcaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const marca = button.dataset.marca;
+            const presentacion = button.dataset.presentacion;
+            const paletas = document.querySelectorAll(`.paleta[data-marca="${marca}"]`);
+
+            // Actualizar la presentación con animación
+            pPresentacion.classList.remove('visible'); // Oculta la presentación actual
+            setTimeout(() => {
+                pPresentacion.textContent = presentacion;
+                pPresentacion.classList.add('visible'); // Muestra la nueva presentación
+            }, 500); // Ajusta el tiempo según la animación deseada
+
+            // Mostrar/Ocultar paletas
+            paletas.forEach(paleta => {
+                if (paleta.classList.contains('visible')) {
+                    paleta.classList.remove('visible');
+                    setTimeout(() => {
+                        paleta.style.display = 'none';
+                    }, 1500); // Espera hasta que termine la transición para ocultarlo
+                } else {
+                    paleta.style.display = 'block';
+                    setTimeout(() => {
+                        paleta.classList.add('visible');
+                    }, 10); // Añade la clase visible después de hacer visible el elemento
+                }
+            });
+        });
+    });
+
     if (index === 1) {
         window.location.href = 'index.html';
     }
 });
+
+
+
 
 
 
@@ -126,3 +185,7 @@ abrirOtraConsulta.addEventListener('click', (e) => {
          
     });
 })
+
+
+
+
