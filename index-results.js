@@ -110,12 +110,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Event listeners para los botones de marcas
     const marcaButtons = document.querySelectorAll('.button');
-    marcaButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const marca = button.dataset.marca;
-            const presentacion = button.dataset.presentacion;
-            const paletas = document.querySelectorAll(`.paleta[data-marca="${marca}"]`);
 
+marcaButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const marca = button.dataset.marca;
+        const presentacion = button.dataset.presentacion;
+        const paletas = document.querySelectorAll(`.paleta[data-marca="${marca}"]`);
+
+        // Ocultar todas las paletas primero
+        document.querySelectorAll('.paleta.visible').forEach(paleta => {
+            paleta.classList.remove('visible');
+            setTimeout(() => {
+                paleta.style.display = 'none';
+            }, 1500); // Espera hasta que termine la transición para ocultarlo
+        });
+
+        // Esperar a que las paletas se oculten antes de mostrar las nuevas
+        setTimeout(() => {
             // Actualizar la presentación con animación
             pPresentacion.classList.remove('visible'); 
             setTimeout(() => {
@@ -123,23 +134,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 pPresentacion.classList.add('visible'); 
             }, 500); 
 
-            // Mostrar/Ocultar paletas
+            // Mostrar solo las paletas correspondientes a la marca seleccionada
             paletas.forEach(paleta => {
-                if (paleta.classList.contains('visible')) {
-                    paleta.classList.remove('visible');
-                    setTimeout(() => {
-                        paleta.style.display = 'none';
-                    }, 1500); // Espera hasta que termine la transición para ocultarlo
-                } else {
-                    paleta.style.display = 'block';
-                    setTimeout(() => {
-                        paleta.classList.add('visible');
-                    }, 10); // Añade la clase visible después de hacer visible el elemento
-                }
+                paleta.style.display = 'block';
+                setTimeout(() => {
+                    paleta.classList.add('visible');
+                }, 10); // Añade la clase visible después de hacer visible el elemento
             });
-        });
+        }, 1500); // Espera hasta que todas las paletas se hayan ocultado
     });
+});
 
+    
     if (index === 1) {
         window.location.href = 'index.html';
     }

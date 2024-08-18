@@ -721,6 +721,14 @@ div.slide h4{
       .flecha{
         display: block;
       }
+      .instagram {
+        width: 36px;
+        height: 36px;
+        margin-top: 20px;
+      }
+      .call-to-action1 div{
+        display: flex;
+      }
 
 }
   /*responsive*/

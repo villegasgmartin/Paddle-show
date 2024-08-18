@@ -113,7 +113,7 @@ document.querySelector('.form-canchas').addEventListener('submit', (e) => {
     const nombre = document.querySelector('.form-canchas input[placeholder="Nombre"]').value;
     const localidad = document.querySelector('.form-canchas input[placeholder="Localidad"]').value;
     const cancha = document.querySelector('.form-canchas input[placeholder="Nombre de Cancha"]').value;
-    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quiero consultar por el servicio de canchas, mi nombre es ${nombre}, vivo en ${localidad} y mi club es ${cancha}`;
+    const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quiero consultar por el servicio de canchas, mi nombre es ${nombre}, vivo en ${localidad} y el club es ${cancha}`;
     window.location.href = link;
     setTimeout(() =>{
         document.querySelector('.consulta').style.display = 'none';
