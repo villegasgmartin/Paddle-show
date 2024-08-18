@@ -622,7 +622,7 @@ div.slide h4{
   }
   .flecha{
     transform: rotate(90deg);
-    width: 60px;
+    width: 45px;
     height: auto;
     margin-top: 15px;
     display: none;

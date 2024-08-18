@@ -117,11 +117,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             const paletas = document.querySelectorAll(`.paleta[data-marca="${marca}"]`);
 
             // Actualizar la presentación con animación
-            pPresentacion.classList.remove('visible'); // Oculta la presentación actual
+            pPresentacion.classList.remove('visible'); 
             setTimeout(() => {
                 pPresentacion.textContent = presentacion;
-                pPresentacion.classList.add('visible'); // Muestra la nueva presentación
-            }, 500); // Ajusta el tiempo según la animación deseada
+                pPresentacion.classList.add('visible'); 
+            }, 500); 
 
             // Mostrar/Ocultar paletas
             paletas.forEach(paleta => {

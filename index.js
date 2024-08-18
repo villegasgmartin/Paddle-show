@@ -556,7 +556,6 @@ submit.addEventListener('click', (event) => {
     }
 
     // Redirecciona a la URL creada
-    console.log(url);
     window.location.href = url; // Redirige a la página de resultados
 });
 
