@@ -510,6 +510,12 @@ div.slide h4{
     background: #5472FF;
     color:#fff;
   }
+  .call-to-action3{
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    color:#fff;
+  }
   
   .call-to-action2 {
     display: flex;
@@ -534,6 +540,13 @@ div.slide h4{
   .call-to-action1 p{
     max-width: 600px;
   }
+  .call-to-action1 div{
+    display: flex;
+     align-items: center;
+ }
+ .call-to-action1 div button{
+     margin-top:0;
+ }
   a{
     text-decoration: none;
     color:inherit
@@ -724,10 +737,12 @@ div.slide h4{
       .instagram {
         width: 36px;
         height: 36px;
-        margin-top: 20px;
       }
       .call-to-action1 div{
         display: flex;
+      }
+      .call-to-action3{
+        text-align: center;
       }
 
 }

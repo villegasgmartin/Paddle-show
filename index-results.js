@@ -1,9 +1,26 @@
+//copyright Copyright (c)
+
+const year = document.querySelector('#year');
+
+const fecha = new Date;
+
+year.textContent = fecha.getFullYear();
+
+
 
 window.addEventListener('DOMContentLoaded', (event) => {
     const params = new URLSearchParams(window.location.search);
     const container = document.querySelector('.paletas');
     const pPresentacion = document.querySelector('.presentacion');
     const btnmarcas = document.querySelector('.botones');
+
+     //query del form
+     const altura = params.get('altura');
+     const peso = params.get('peso');
+     const potencia = params.get('potencia');
+     const ataque = params.get('ataque');
+     const categoria = params.get('categoria');
+     const lado = params.get('lado');
 
     let index = 1;
     let marcaIndex = 1;
@@ -15,7 +32,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const gama = params.get(`gama`);
 
         // Manejar las presentaciones de las marcas
-        if (gama == 'gama3' && (index === 1 || index === 2 || index === 3)) {
+        if ((gama == 'gama3' || gama == 'gama5') && (index === 1 || index === 2 || index === 3)) {
             const marca = params.get(`marca${marcaIndex}`);
             if (marca) {
                 const divbtn = document.createElement('div');
@@ -33,7 +50,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             marcaIndex++;
         }
 
-        if (index === 1 || (index === 4 && gama != 'gama3')) {
+        if (index === 1 || (index === 4 && gama != 'gama3' && gama != 'gama5')) {
             const marca = params.get(`marca${marcaIndex}`);
             if (marca) {
                 const divbtn = document.createElement('div');
@@ -50,7 +67,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
             marcaIndex++;
         }
-
+        
         // Crear el elemento div .paleta
         const paletaDiv = document.createElement('div');
         paletaDiv.classList.add('paleta');
@@ -97,8 +114,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 e.preventDefault();
                 const nombre = document.querySelector('.consulta-form input[placeholder="Nombre"]').value;
                 const localidad = document.querySelector('.consulta-form input[placeholder="Localidad"]').value;
-                const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}`;
-                window.location.href = link;
+                const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}, juego en la categoria ${categoria}, prefiero jugar del lado ${lado}, me gusta mas el/la ${ataque}, busco mejorar mi ${potencia}, mido ${altura} cm y peso ${peso} Kg`;
+                window.open(link, '_blank');
                 setTimeout(() => {
                     document.querySelector('.consulta').style.display = 'none';
                 }, 3000);

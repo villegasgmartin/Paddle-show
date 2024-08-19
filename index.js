@@ -1,3 +1,12 @@
+//copyright Copyright (c)
+
+const year = document.querySelector('#year');
+
+const fecha = new Date;
+
+year.textContent = fecha.getFullYear();
+
+// intro al comenzar
 
 const intro = document.querySelector('.intro');
 const form = document.querySelector('.container');
@@ -410,12 +419,12 @@ const paletas = [
         <li>Material interno: Goma EVA HR3*</li>
 
         <li>Material externo: Fibra de carbono 3K. 
-Le da una gran resistencia y durabilidad, sin sacrificar ligereza.
-Excelente equilibrio entre control y potencia. Además, tiene un acabado rugoso, lo que ayuda a imprimir efectos en la pelota.
-</li>
+        Le da una gran resistencia y durabilidad, sin sacrificar ligereza.
+        Excelente equilibrio entre control y potencia. Además, tiene un acabado rugoso, lo que ayuda a imprimir efectos en la pelota.
+        </li>
 
         <li>Ideal si buscás un equilibrio entre control y potencia, pero con una ligera inclinación hacia el control. Es una pala cómoda y manejable, que te permite defender con eficacia y atacar con control.
-</li>
+        </li>
 
         </ul>`,
         imagen1:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723605813/paddleshow/gama5/Nox_ML10_Pro_Cup_3k_Luxury_2024-removebg-preview_xzags6.png',
@@ -487,11 +496,48 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
 
         </ul>`,
         imagen6:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723606271/paddleshow/gama5/Vertex_03_2023-removebg-preview_ceijyx.png', 
+        titulo7:' Adidas Adipower Multiweight 3.2 2023',
+        descripcion7:`<ul>
+        <li>
+          Formato: Lágrima. Ofrece un buen equilibrio entre potencia y control, ya que el punto dulce está ligeramente elevado, lo que permite un golpeo más potente sin perder mucha precisión. 
+        </li>
+        <li>
+         Material interno: Goma EVA de alta densidad. Se utiliza para proporcionar un equilibrio entre potencia y control, ya que es capaz de absorber los impactos del golpeo, lo que brinda una buena salida de bola sin sacrificar el control en cada golpe.
+          </li>
+        </ul>`,
+        imagen7:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064878/paddleshow/gama5/Adipower_Multiweight_3_vrcjgq.jpg',
+        titulo8:'Adidas Metalbone Carbon 3.3 2024',
+        descripcion8:`<ul>
+        <li>
+          Formato: Diamante. Diseñado para maximizar la potencia, ya que el punto dulce está ubicado en la parte superior de la paleta. 
+ 
+        </li>
+        <li>
+         Es ideal si preferís un estilo de juego agresivo y potente. Debido a su formato de diamante y balance alto, está especialmente diseñada para  maximizar la potencia en tus golpes, como los remates y voleas ofensivas. Sin embargo, requiere un buen nivel de técnica y experiencia para manejarla con precisión, por lo que es más adecuada si ya tenés una sólida base de control y buscás llevar tu juego al siguiente nivel en términos de agresividad y fuerza.
+          </li>
+        </ul>`,
+        imagen8:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064878/paddleshow/gama5/Metalbone_Carbon_3_vxchhr.jpg',
+        titulo9:'Adidas Ale Galán Metalbone 3.2 2023',
+        descripcion9:`<ul>
+        <li>
+          Formato: Diamante, lo que desplaza el punto dulce hacia la parte superior. 
+ 
+        </li>
+        <li>
+         Material interno: Goma EVA Soft Performance. Conocida por su capacidad de amortiguación, lo que proporciona un tacto más suave y cómodo. Además, contribuye a un buen equilibrio entre potencia y control, ya que permite una rápida recuperación del material tras cada golpe, mejorando la salida de la bola sin comprometer la precisión.
+          </li>
+          <li>
+          Ideal si buscás alta potencia, excelente control, y tenés la técnica y fuerza necesarias para manejar un formato de forma de diamante con balance alto.
+          </li>
+        </ul>`,
+        imagen9:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064879/paddleshow/gama5/Ale_Gal%C3%A1n_Metalbone_3_bktlxo.jpg',
         marca1:'Nox',
         marca2:'Bullpadel',
+        marca3:'Adidas',
         gama:'gama5',
         presentacionNox: 'Marca líder mundial utilizada por jugadores top como Agustín Tapia, Miguel Lamperti y Tino Libaak, entre muchos.*Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.',
-        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos.*Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.'
+        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos.*Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.',
+        presentacionAdidas:'Adidas es una marca líder mundial utilizada por jugadores top como Alejandro Galán y Alex Ruiz, entre otros.'
     }
 ]
 
@@ -548,7 +594,7 @@ submit.addEventListener('click', (event) => {
     }
     
     if (gamaSeleccionada === paletas[4]) {
-        url += `&titulo6=${encodeURIComponent(gamaSeleccionada.titulo6)}&descripcion6=${encodeURIComponent(gamaSeleccionada.descripcion6)}&imagen6=${encodeURIComponent(gamaSeleccionada.imagen6)}`;
+        url += `&titulo6=${encodeURIComponent(gamaSeleccionada.titulo6)}&descripcion6=${encodeURIComponent(gamaSeleccionada.descripcion6)}&imagen6=${encodeURIComponent(gamaSeleccionada.imagen6)}&titulo7=${encodeURIComponent(gamaSeleccionada.titulo7)}&descripcion7=${encodeURIComponent(gamaSeleccionada.descripcion7)}&imagen7=${encodeURIComponent(gamaSeleccionada.imagen7)}&titulo8=${encodeURIComponent(gamaSeleccionada.titulo8)}&descripcion8=${encodeURIComponent(gamaSeleccionada.descripcion8)}&imagen8=${encodeURIComponent(gamaSeleccionada.imagen8)}&titulo9=${encodeURIComponent(gamaSeleccionada.titulo9)}&descripcion9=${encodeURIComponent(gamaSeleccionada.descripcion9)}&imagen9=${encodeURIComponent(gamaSeleccionada.imagen9)}&marca3=${encodeURIComponent(gamaSeleccionada.marca3)}&presentacion${gamaSeleccionada.marca3}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca3])}`;
     }
 
     if (gamaSeleccionada === paletas[2]) {

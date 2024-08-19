@@ -52,6 +52,7 @@ body::after {
   .container h1{
     font-size: 63px;
     font-weight: 400;
+    margin-bottom: 10px;
   }
   .paletas {
     display: flex;
@@ -89,7 +90,11 @@ body::after {
     color:#000;
 
   }
- 
+ .click-botones{
+  font-size: 14px;
+  margin-bottom: 30px;
+  display: block;
+ }
   .button {
     background: #6782FF;
     color: #fff;
@@ -156,6 +161,7 @@ p.presentacion{
   max-width: 800px;
   margin: auto;
   padding-bottom: 40px;
+  text-align: justify;
 }
 
 input[type=text]{
@@ -228,6 +234,7 @@ div.consulta-otra input, div.consulta-otra label{
 .button-container .button {
   display: inline-block;
   min-width: 200px;
+  font-size:17px;
 }
 
 .presentacion {
@@ -246,6 +253,12 @@ div.consulta-otra input, div.consulta-otra label{
 }
 .call-to-action2 div{
   display: flex;
+}
+.call-to-action3{
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  color:#fff;
 }
 @media only screen and (max-width:780px){
       .container h1{
@@ -304,7 +317,9 @@ div.consulta-otra input, div.consulta-otra label{
   display: flex;
   flex-direction: column;
 }
-
+.call-to-action3{
+  text-align: center;
+}
 }
 
 @media only screen and (min-width:780px) and (max-width:1030px){
