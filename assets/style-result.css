@@ -354,6 +354,7 @@ div.consulta-otra input, div.consulta-otra label{
    p.oferta, p.presentacion{
     text-align: center;
     padding: 20px;
+    font-size: 15px;
 }
 .botones{
   display: flex;
