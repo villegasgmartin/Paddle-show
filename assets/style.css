@@ -295,13 +295,15 @@ button:hover {
     background: #5472FF;
 }
 
+
 /*selects*/
-div.slide input[type=text], .form-canchas input, .form-salud input{
+div.slide input[type=text], .form-canchas input, .form-salud input {
     width: 90%;
-    border:1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px;
 }
+
 div.slide select {
     appearance: none;
     -webkit-appearance: none;
@@ -310,11 +312,16 @@ div.slide select {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px;
+    background: white url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTEuMjY2IDQuMzMzYy0uMzQ4LS4zNDgtLjM0OC0uOTEyIDAtMS4yNjZsLjY2Ny0uNjY3Yy4zNDgtLjM0OC45MTItLjM0OC4xMjY2IDBMOC41IDEwLjMzMyA5LjM2NyA5LjY2N2MuMzQ4LS4zNDguOTExLS4zNDguMjY2IDBMMTUuNSAzYy4zNDgtLjM0OC45MTItLjM0OC4yNjYgMEwxNiA0LjMzM0M4LjY1MSA0LjY4IDAgNC42OCAwIDUuMDFWNS4wMWMtLjAwMSAwIC4zNDgtLjA0LjY2Ny0uMzMzbC4zMzMtLjY2N3oiLz48L3N2Zz4=') no-repeat right 10px center;
+    background-size: 16px;
+    cursor: pointer;
 }
+
 div.slide select:focus {
     border-color: rgba(0, 0, 0, 0.5);
     outline: none;
 }
+
 @supports (-webkit-touch-callout: none) {
     div.slide select {
         width: 100%;
@@ -324,8 +331,14 @@ div.slide select:focus {
         appearance: none; /* Quitar el estilo predeterminado */
         -webkit-appearance: none; /* Safari */
         -moz-appearance: none; /* Firefox */
+        background: white url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTEuMjY2IDQuMzMzYy0uMzQ4LS4zNDgtLjM0OC0uOTEyIDAtMS4yNjZsLjY2Ny0uNjY3Yy4zNDgtLjM0OC45MTItLjM0OC4xMjY2IDBMOC41IDEwLjMzMyA5LjM2NyA5LjY2N2MuMzQ4LS4zNDguOTExLS4zNDguMjY2IDBMMTUuNSAzYy4zNDgtLjM0OC45MTItLjM0OC4yNjYgMEwxNiA0LjMzM0M4LjY1MSA0LjY4IDAgNC42OCAwIDUuMDFWNS4wMWMtLjAwMSAwIC4zNDgtLjA0LjY2Ny0uMzMzbC4zMzMtLjY2N3oiLz48L3N2Zz4=') no-repeat right 10px center;
+        background-size: 16px;
+        cursor: pointer;
     }
 }
+
+
+
 
 div.slide label{
     font-size: 15px;

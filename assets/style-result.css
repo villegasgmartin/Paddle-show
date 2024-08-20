@@ -265,9 +265,10 @@ div.consulta-otra input, div.consulta-otra label{
  
   padding: 20px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
   width: auto;
   max-width: 400px;
@@ -278,13 +279,17 @@ div.consulta-otra input, div.consulta-otra label{
   right: 0;
   bottom: 0;
   margin: auto;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2) 50%), url('/assets/img/Sponsor.jpg') no-repeat center top/cover;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Sponsor.jpg') no-repeat center top/cover;
   z-index: 100;
   
 
 }
 .sponsor{
   display: none;
+}
+.sponsor h3{
+  color:#fff;
+  font-size: 67px;
 }
 
 .sponsor:before{
@@ -298,6 +303,10 @@ div.consulta-otra input, div.consulta-otra label{
   background: linear-gradient(180deg, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.9) 50%);
   z-index: 100;
  
+}
+#cerrarSponsor{
+  min-width: 230px;
+  font-size: 20px;
 }
 
 

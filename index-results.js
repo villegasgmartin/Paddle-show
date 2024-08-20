@@ -220,6 +220,14 @@ abrirOtraConsulta.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('.consulta-otra').style.display = 'block'; // Mostrar el popup  
 
+
+    //query del form
+    const altura = params.get('altura');
+    const peso = params.get('peso');
+    const potencia = params.get('potencia');
+    const ataque = params.get('ataque');
+    const categoria = params.get('categoria');
+    const lado = params.get('lado');
     // Evento para completar el enlace de WhatsApp
     document.querySelector('.consulta-otra').addEventListener('submit', (e) => {
         e.preventDefault();
@@ -228,7 +236,7 @@ abrirOtraConsulta.addEventListener('click', (e) => {
         const marca = document.querySelector('.consulta-form-otra input[placeholder="Marca"]').value;
         const modelo = document.querySelector('.consulta-form-otra input[placeholder="Modelo"]').value;
     
-        const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta marca ${marca} y modelo ${modelo} mi nombre es ${nombre} y vivo en ${localidad}`;
+        const link = `https://wa.me/5491157202809?text=Quisiera consultar por la paleta marca ${marca} y modelo ${modelo} mi nombre es ${nombre} y vivo en ${localidad}, juego en la categoria ${categoria}, prefiero jugar del lado ${lado}, me gusta mas el/la ${ataque}, busco mejorar mi ${potencia}, mido ${altura} cm y peso ${peso} Kg`;
         window.location.href = link;
         setTimeout(() =>{
             document.querySelector('.consulta-otra').style.display = 'none';
