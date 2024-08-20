@@ -670,14 +670,12 @@ div.slide h4{
         min-width: 100%;
         gap:0px;
         height: auto;
-        align-items: stretch;
         
     }
     .margin-top{
         margin-top:40px;
     }
     .intro{
-        margin-bottom:30px;
         padding: 30px 25px; 
         width: 80%;
         max-width: none;
@@ -733,6 +731,10 @@ div.slide h4{
       }
       .flecha{
         display: block;
+        filter: grayscale(1) brightness(1.5) invert(0.1);
+        z-index: 99;
+        width: 80px;
+
       }
       .instagram {
         width: 36px;

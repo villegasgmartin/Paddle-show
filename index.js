@@ -222,9 +222,9 @@ const paletas = [
 
         `,
         imagen4:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723948865/paddleshow/gama1/Fg_Black_Equilibrium_marco_carbono-removebg-preview_xifoqr.png',
-        presentacionFg:`Paletas sin ploteo, de una marca líder mundial en fabricación.
-        Con más de 30 años de trayectoria, siempre mejorando e innovando, y exportando a todo el mundo, principalmente a España.Sponsor oficial de jugadores de primera categoría internacional.
-        `,
+        presentacionFg:`Fg es la marca propia de la fábrica más importante de Argentina, con más de 30 años de trayectoria. Exporta paletas a todo el mundo, principalmente a España, débito a sus altos estándares de calidad. 
+        <br/>
+        Es lo mejor en relación precio calidad en esta gama a tal punto que los creadores de PaddleShow, teniendo acceso a todas las marcas, preferimos usar Fg. Es una marca que está creciendo muy rápido, porque además de su calidad y excelente precio, invierte constantemente en sponsorear y apoyar jugadores de primera categoría.`,
         marca2:'Fg',
         gama:'gama1'
     },
@@ -272,7 +272,7 @@ const paletas = [
 
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173780/paddleshow/gama2/Diamante_1_hvaptz.jpg',
-        presentacion:`Cigio es el último lanzamiento de una de las fábricas más importantes de Argentina, con más de 15 años de trayectoria. 
+        presentacionCigio:`Cigio es el último lanzamiento de una de las fábricas más importantes de Argentina, con más de 15 años de trayectoria. 
     Lo mejor en diseño, calidad y precio para su gama.
     `,
     marca1:'Cigio',
@@ -331,9 +331,9 @@ const paletas = [
             
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173911/paddleshow/gama3/Magnus_Hans_Diamante-removebg-preview_w0eova.png',
-        presentacionBullpadel:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
-        presentacionHead:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
-        presentacionMagnus:'En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.',
+        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto y Bea González, entre muchos.',
+        presentacionHead:'Marca líder mundial utilizada por jugadores top como Arturo Coello y Sanyo Gutiérrez, entre otros.',
+        presentacionMagnus:'Material interno: foam inglés de alta calidad, para mayor control, y se sienten muy bien los golpes.',
         marca1:'Bullpadel',
         marca2:'Head',
         marca3:'Magnus',
@@ -380,7 +380,9 @@ const paletas = [
         
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723174034/paddleshow/gama4/Fg_Black_Power_12k-removebg-preview_tledwi.png',
-        presentacionFg:'Fg es la marca propia de la fábrica más importante de Argentina, con más de 30 años de trayectoria. Exporta paletas a todo el mundo, principalmente a España, débito a sus altos estándares de calidad. Es lo mejor en relación precio calidad en esta gama a tal punto que los creadores de PaddleShow, teniendo acceso a todas las marcas, preferimos usar Fg. Es una marca que está creciendo muy rápido, porque además de su calidad y excelente precio, invierte constantemente en sponsorear y apoyar jugadores de primera categoría.',
+        presentacionFg:`Fg es la marca propia de la fábrica más importante de Argentina, con más de 30 años de trayectoria. Exporta paletas a todo el mundo, principalmente a España, débito a sus altos estándares de calidad. 
+        <br/>
+        Es lo mejor en relación precio calidad en esta gama a tal punto que los creadores de PaddleShow, teniendo acceso a todas las marcas, preferimos usar Fg. Es una marca que está creciendo muy rápido, porque además de su calidad y excelente precio, invierte constantemente en sponsorear y apoyar jugadores de primera categoría.`,
         presentacionVairo:'Es reconocida por sus paletas de alta durabilidad y rendimiento, utilizando materiales premium y fabricando con estándares internacionales, exportando a todo el mundo, incluído España.Con más de 30 años en el mercado, Vairo es una marca argentina de confianza, respaldada por su historia y patrocinio de jugadores de élite.',
         titulo4:'Vairo Grapheno Confort 9.1',
         descripcion4:`<ul>
@@ -535,8 +537,12 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
         marca2:'Bullpadel',
         marca3:'Adidas',
         gama:'gama5',
-        presentacionNox: 'Marca líder mundial utilizada por jugadores top como Agustín Tapia, Miguel Lamperti y Tino Libaak, entre muchos.*Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.',
-        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos.*Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.',
+        presentacionNox: `Marca líder mundial utilizada por jugadores top como Agustín Tapia, Miguel Lamperti y Tino Libaak, entre muchos.
+        <br/>
+        *Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.`,
+        presentacionBullpadel:`Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos. 
+         <br/>
+        *Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.`,
         presentacionAdidas:'Adidas es una marca líder mundial utilizada por jugadores top como Alejandro Galán y Alex Ruiz, entre otros.'
     }
 ]
