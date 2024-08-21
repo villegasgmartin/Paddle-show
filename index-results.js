@@ -222,6 +222,7 @@ abrirOtraConsulta.addEventListener('click', (e) => {
 
 
     //query del form
+    const params = new URLSearchParams(window.location.search);
     const altura = params.get('altura');
     const peso = params.get('peso');
     const potencia = params.get('potencia');

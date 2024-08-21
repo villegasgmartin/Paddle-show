@@ -331,9 +331,19 @@ const paletas = [
             
         </ul>`,
         imagen3:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173911/paddleshow/gama3/Magnus_Hans_Diamante-removebg-preview_w0eova.png',
-        presentacionBullpadel:'Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto y Bea González, entre muchos.',
-        presentacionHead:'Marca líder mundial utilizada por jugadores top como Arturo Coello y Sanyo Gutiérrez, entre otros.',
-        presentacionMagnus:'Material interno: foam inglés de alta calidad, para mayor control, y se sienten muy bien los golpes.',
+        presentacionBullpadel:`En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.
+        <br/>
+        <br/>
+        Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto y Bea González, entre muchos.`,
+        presentacionHead:`En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.
+        <br/>
+        <br/>
+        Marca líder mundial utilizada por jugadores top como Arturo Coello y Sanyo Gutiérrez, entre otros.`,
+        presentacionMagnus:`
+        En ésta gama, tenemos las versiones nacionales de las marcas más importantes del mundo, las que usan los jugadores estrella de World Pádel Tour.
+        <br/>
+        <br/>
+        Marca líder mundial, que fué utilizada por jugadores top como Federico Chiostri y Gonzalo Alfonso.`,
         marca1:'Bullpadel',
         marca2:'Head',
         marca3:'Magnus',
@@ -539,10 +549,12 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
         gama:'gama5',
         presentacionNox: `Marca líder mundial utilizada por jugadores top como Agustín Tapia, Miguel Lamperti y Tino Libaak, entre muchos.
         <br/>
-        *Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.`,
+        <br/>
+        (*Goma EVA HR3. De alta densidad y recuperación rápida. Combinación de control y potencia.Tiene una alta memoria, porque recupera rápidamente su forma original después del impacto con la pelota, ofreciendo una sensación de golpeo más firme y preciso, ideal para jugadores que buscan un toque sólido en cada golpe.)`,
         presentacionBullpadel:`Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto, Martín Di Nenno y Bea González, entre muchos. 
          <br/>
-        *Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.`,
+           <br/>
+        (*Goma MultiEva: Compuesto por dos capas de goma de diferentes densidades: Capa exterior de mayor densidad, que proporciona una respuesta rápida y mayor potencia en los golpes más fuertes.Capa interior: De menor densidad, ofrece mayor absorción y control en los golpes más suaves.Esta combinación potencia situaciones de juego que requieren precisión y aquellas que demandan potencia.)`,
         presentacionAdidas:'Adidas es una marca líder mundial utilizada por jugadores top como Alejandro Galán y Alex Ruiz, entre otros.'
     }
 ]
@@ -585,9 +597,10 @@ submit.addEventListener('click', (event) => {
     }
     console.log(gamaSeleccionada);
 
-    if (!altura || !peso || !valor) {
+    if (!altura || !peso || !valor || potencia == 'default' || ataque == 'default' || categoria== 'default' || lado=='default') {
         return alert('Complete todos los datos para continuar la consulta');
     }
+
 
     // Crea la URL para la página de resultados pasando los datos necesarios como parámetros
     let url = `result.html?titulo1=${encodeURIComponent(gamaSeleccionada.titulo1)}&descripcion1=${encodeURIComponent(gamaSeleccionada.descripcion1)}&imagen1=${encodeURIComponent(gamaSeleccionada.imagen1)}&titulo2=${encodeURIComponent(gamaSeleccionada.titulo2)}&descripcion2=${encodeURIComponent(gamaSeleccionada.descripcion2)}&imagen2=${encodeURIComponent(gamaSeleccionada.imagen2)}&titulo3=${encodeURIComponent(gamaSeleccionada.titulo3)}&descripcion3=${encodeURIComponent(gamaSeleccionada.descripcion3)}&imagen3=${encodeURIComponent(gamaSeleccionada.imagen3)}&altura=${encodeURIComponent(altura)}&peso=${encodeURIComponent(peso)}&potencia=${encodeURIComponent(potencia)}&ataque=${encodeURIComponent(ataque)}&categoria=${encodeURIComponent(categoria)}&lado=${encodeURIComponent(lado)}&marca1=${encodeURIComponent(gamaSeleccionada.marca1)}&presentacion${gamaSeleccionada.marca1}=${encodeURIComponent(gamaSeleccionada['presentacion' + gamaSeleccionada.marca1])}&gama=${encodeURIComponent(gamaSeleccionada.gama)}`;
