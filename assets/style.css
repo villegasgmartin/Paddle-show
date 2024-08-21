@@ -297,7 +297,7 @@ button:hover {
 
 
 /*selects*/
-div.slide input[type=text], .form-canchas input, .form-salud input {
+div.slide input[type=number], .form-canchas input, .form-salud input {
     width: 90%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
