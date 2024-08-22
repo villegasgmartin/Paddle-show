@@ -134,7 +134,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             const presentacion = button.dataset.presentacion;
             const paletas = document.querySelectorAll(`.paleta[data-marca="${marca}"]`);
             const sponsor = document.querySelector('.sponsor')
-    
+            const sponsorCigio = document.querySelector('.sponsor-cigio')
             // Restablecer la opacidad de todos los botones
             marcaButtons.forEach(btn => {
                 btn.style.opacity = '1';
@@ -153,9 +153,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             });
             if(marca == 'Fg'){
                 sponsor.style.display = 'flex';
+            }
+            if(marca == 'Cigio'){
+                sponsorCigio.style.display = 'flex';
             }else{
                 sponsor.style.display = 'none';
             }
+
             // Ocultar todas las paletas primero
             document.querySelectorAll('.paleta.visible').forEach(paleta => {
                 paleta.classList.remove('visible');
@@ -193,13 +197,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 //cerrar sponsor
-const cerrarSponsor = document.querySelector('#cerrarSponsor');
+const cerrarSponsor = document.querySelectorAll('#cerrarSponsor');
 const sponsor = document.querySelector('.sponsor')
+const sponsorCigio = document.querySelector('.sponsor-cigio')
 
-cerrarSponsor.addEventListener('click', ()=>{
-    sponsor.style.display = 'none';
+cerrarSponsor.forEach(sponsorbtn => { 
+    sponsorbtn.addEventListener('click', ()=>{
+        sponsor.style.display = 'none';
+        sponsorCigio.style.display = 'none';
+    
+    })
+});
 
-})
+
 
 
 const cerrarpop = document.querySelector('.consulta-form button.cerrar');

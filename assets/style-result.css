@@ -284,7 +284,27 @@ div.consulta-otra input, div.consulta-otra label{
   
 
 }
-.sponsor{
+.imagen-sponsor-cigio{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: end;
+  height: 100%;
+  width: auto;
+  max-width: 400px;
+  max-height: 600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Presentación\ marca\ Cigio\ 2.jpg') no-repeat center top/cover;
+  z-index: 100;
+}
+.sponsor, .sponsor-cigio{
   display: none;
 }
 .sponsor h3{
@@ -292,7 +312,7 @@ div.consulta-otra input, div.consulta-otra label{
   font-size: 67px;
 }
 
-.sponsor:before{
+.sponsor:before, .sponsor-cigio::before{
   content: "";
   position: absolute;
   top: 0;

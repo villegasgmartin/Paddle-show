@@ -279,7 +279,7 @@ const paletas = [
     gama:'gama2'
     },
     gama3={
-        titulo1:'Bullpadel',
+        titulo1:'Bullpadel Universe Control',
         descripcion1:`<ul>
         <li>Marca líder mundial utilizada por jugadores top como Paquito Navarro, Fede Chingotto y Bea González, entre muchos.</li>
 
@@ -511,36 +511,57 @@ También tiene un acabado rugoso, que ayuda a mejorar el efecto en los golpes, p
         titulo7:' Adidas Adipower Multiweight 3.2 2023',
         descripcion7:`<ul>
         <li>
-          Formato: Lágrima. Ofrece un buen equilibrio entre potencia y control, ya que el punto dulce está ligeramente elevado, lo que permite un golpeo más potente sin perder mucha precisión. 
+          Formato: Lágrima. Buen equilibrio entre potencia y control.
         </li>
         <li>
-         Material interno: Goma EVA de alta densidad. Se utiliza para proporcionar un equilibrio entre potencia y control, ya que es capaz de absorber los impactos del golpeo, lo que brinda una buena salida de bola sin sacrificar el control en cada golpe.
+        Material interno: Goma EVA de alta densidad. Brinda una buena salida de bola sin sacrificar el control en cada golpe.
+          </li>
+          <li>
+          Material externo: Carbono aluminizado. Da una mayor durabilidad y una superficie más rígida que ayuda a aumentar la potencia en los golpes. 
+
+          </li>
+          <li>
+            Es ideal si disfrutás de un estilo de juego agresivo, pero que también valorás la precisión y el manejo en cada golpe. Además, su tecnología de ajuste de peso (Multiweight), te permite personalizar la paleta según tus preferencias.
+
           </li>
         </ul>`,
         imagen7:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064878/paddleshow/gama5/Adipower_Multiweight_3_vrcjgq.jpg',
         titulo8:'Adidas Metalbone Carbon 3.3 2024',
         descripcion8:`<ul>
         <li>
-          Formato: Diamante. Diseñado para maximizar la potencia, ya que el punto dulce está ubicado en la parte superior de la paleta. 
+          Formato: Diamante, maximiza la potencia. 
  
         </li>
         <li>
-         Es ideal si preferís un estilo de juego agresivo y potente. Debido a su formato de diamante y balance alto, está especialmente diseñada para  maximizar la potencia en tus golpes, como los remates y voleas ofensivas. Sin embargo, requiere un buen nivel de técnica y experiencia para manejarla con precisión, por lo que es más adecuada si ya tenés una sólida base de control y buscás llevar tu juego al siguiente nivel en términos de agresividad y fuerza.
+         Material interno: Goma EVA Soft Performance. Goma blanda que facilita el control sin sacrificar la potencia. Es conocida por proporcionar una buena salida de bola y un tacto más suave.
           </li>
+          <li>
+          Material externo: Carbono 3K de alta calidad y resistencia que proporciona una superficie rígida y duradera, dándole mayor potencia en los golpes. También ayuda a mantener un buen control y una respuesta rápida en cada impacto.
+ 
+        </li>
+        <li>
+          Es ideal si preferís un estilo de juego agresivo y potente. Sin embargo, requiere un buen nivel de técnica y experiencia para manejarla con precisión, por lo que es más adecuada si ya tenés una sólida base de control y buscás llevar tu juego al siguiente nivel en términos de agresividad y fuerza.
+ 
+        </li>
         </ul>`,
         imagen8:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064878/paddleshow/gama5/Metalbone_Carbon_3_vxchhr.jpg',
         titulo9:'Adidas Ale Galán Metalbone 3.2 2023',
         descripcion9:`<ul>
         <li>
-          Formato: Diamante, lo que desplaza el punto dulce hacia la parte superior. 
+          Formato: Diamante, punto de equilibrio hacia la parte superior. 
  
         </li>
         <li>
-         Material interno: Goma EVA Soft Performance. Conocida por su capacidad de amortiguación, lo que proporciona un tacto más suave y cómodo. Además, contribuye a un buen equilibrio entre potencia y control, ya que permite una rápida recuperación del material tras cada golpe, mejorando la salida de la bola sin comprometer la precisión.
+        Material interno: Goma EVA Soft Performance. Proporciona un tacto más suave y cómodo. Contribuye a un buen equilibrio entre potencia y control, mejorando la salida de la bola sin comprometer la precisión.
           </li>
           <li>
-          Ideal si buscás alta potencia, excelente control, y tenés la técnica y fuerza necesarias para manejar un formato de forma de diamante con balance alto.
+         Material externo: Carbon Aluminized. Combina carbono y aluminio para ofrecer una mayor resistencia y durabilidad. También ayuda a mantener la estructura de la paleta firme, minimizando deformaciones y maximizando la precisión en los golpes.
+
           </li>
+           <li>
+          Ideal si buscás alta potencia, excelente control, y tenés la técnica y fuerza necesarias para manejar un formato de forma de diamante con balance alto. 
+ 
+        </li>
         </ul>`,
         imagen9:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1724064879/paddleshow/gama5/Ale_Gal%C3%A1n_Metalbone_3_bktlxo.jpg',
         marca1:'Nox',
