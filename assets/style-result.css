@@ -290,7 +290,7 @@ div.consulta-otra input, div.consulta-otra label{
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: space-between;
   height: 100%;
   width: auto;
   max-width: 400px;
@@ -301,7 +301,7 @@ div.consulta-otra input, div.consulta-otra label{
   right: 0;
   bottom: 0;
   margin: auto;
-  background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Presentación\ marca\ Cigio\ 2.jpg') no-repeat center top/cover;
+  /* background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Presentación\ marca\ Cigio\ 2.jpg') no-repeat center top/cover; */
   z-index: 100;
 }
 .sponsor, .sponsor-cigio{
@@ -311,7 +311,10 @@ div.consulta-otra input, div.consulta-otra label{
   color:#fff;
   font-size: 67px;
 }
-
+.sponsor-cigio h3{
+  color:#fff;
+  font-size: 47px;
+}
 .sponsor:before, .sponsor-cigio::before{
   content: "";
   position: absolute;
@@ -323,6 +326,10 @@ div.consulta-otra input, div.consulta-otra label{
   background: linear-gradient(180deg, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.9) 50%);
   z-index: 100;
  
+}
+.sponsor-cigio img{
+  width: auto;
+  height: 370px;
 }
 #cerrarSponsor{
   min-width: 230px;
@@ -391,6 +398,19 @@ div.consulta-otra input, div.consulta-otra label{
 }
 .call-to-action3{
   text-align: center;
+}
+.sponsor-cigio img{
+  width: auto;
+  height: 280px;
+}
+.sponsor-cigio h3{
+  font-size: 24px;
+}
+.imagen-sponsor-cigio{
+  justify-content: center;
+}
+.imagen-sponsor-cigio #cerrarSponsor{
+  margin-top: 20px;
 }
 }
 
