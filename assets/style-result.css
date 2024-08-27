@@ -304,7 +304,10 @@ div.consulta-otra input, div.consulta-otra label{
   /* background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Presentación\ marca\ Cigio\ 2.jpg') no-repeat center top/cover; */
   z-index: 100;
 }
-.sponsor, .sponsor-cigio{
+.sponsor{
+  display: none;
+}
+.sponsor-cigio{
   display: none;
 }
 .sponsor h3{

@@ -151,14 +151,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             
             });
-            if(marca == 'Fg'){
-                sponsor.style.display = 'flex';
+
+            console.log(marca)
+            switch (marca) {
+                case 'Fg':
+                    sponsor.style.display = 'flex';
+                    break;
+                case 'Cigio':
+                    sponsorCigio.style.display = 'flex';
+                    break;
+                default:
+                    sponsor.style.display = 'none';
+                    sponsorCigio.style.display = 'none';
+                    break;
             }
-            if(marca == 'Cigio'){
-                sponsorCigio.style.display = 'flex';
-            }else{
-                sponsor.style.display = 'none';
-            }
+           
 
             // Ocultar todas las paletas primero
             document.querySelectorAll('.paleta.visible').forEach(paleta => {
