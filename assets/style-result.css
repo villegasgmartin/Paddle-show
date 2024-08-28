@@ -268,7 +268,7 @@ div.consulta-otra input, div.consulta-otra label{
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   width: auto;
   max-width: 400px;
@@ -279,7 +279,7 @@ div.consulta-otra input, div.consulta-otra label{
   right: 0;
   bottom: 0;
   margin: auto;
-  background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Sponsor.jpg') no-repeat center top/cover;
+  /* background: linear-gradient(180deg, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 50%), url('/assets/img/Presentación\ marca\ Cigio\ 2.jpg') no-repeat center top/cover; */
   z-index: 100;
   
 
@@ -310,10 +310,7 @@ div.consulta-otra input, div.consulta-otra label{
 .sponsor-cigio{
   display: none;
 }
-.sponsor h3{
-  color:#fff;
-  font-size: 67px;
-}
+
 .sponsor-cigio h3{
   color:#fff;
   font-size: 47px;
@@ -339,6 +336,20 @@ div.consulta-otra input, div.consulta-otra label{
   font-size: 20px;
 }
 
+.sponsor h3 {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.sponsor img {
+  width: auto;
+  height: 490px;
+}
+.imagen-sponsor{
+  max-height: 700px;
+}
 
 
 @media only screen and (max-width:780px){
@@ -402,19 +413,28 @@ div.consulta-otra input, div.consulta-otra label{
 .call-to-action3{
   text-align: center;
 }
-.sponsor-cigio img{
-  width: auto;
-  height: 280px;
-}
-.sponsor-cigio h3{
-  font-size: 24px;
-}
-.imagen-sponsor-cigio{
-  justify-content: center;
-}
-.imagen-sponsor-cigio #cerrarSponsor{
-  margin-top: 20px;
-}
+  .sponsor-cigio img{
+    width: auto;
+    height: 280px;
+  }
+  .sponsor-cigio h3{
+    font-size: 24px;
+  }
+  .imagen-sponsor-cigio, .imagen-sponsor{
+    justify-content: center;
+  }
+  .imagen-sponsor-cigio #cerrarSponsor, .imagen-sponsor #cerrarSponsor{
+    margin-top: 20px;
+  }
+
+  .sponsor img {
+    width: auto;
+    height: 400px;
+  }
+  .sponsor h3 { 
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width:780px) and (max-width:1030px){
