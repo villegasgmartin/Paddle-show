@@ -76,6 +76,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // Crear y agregar la imagen
         const img = document.createElement('img');
         img.src = imagen;
+        // Extraer el nombre del archivo desde la URL de Cloudinary
+        const tituloImagen = imagen.split('/').pop().split('.')[0]; // Esto toma el último segmento de la URL y elimina la extensión
+        img.alt = tituloImagen;
+
         paletaDiv.appendChild(img);
 
         // Crear y agregar el título (h2)
@@ -115,7 +119,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 const nombre = document.querySelector('.consulta-form input[placeholder="Nombre"]').value;
                 const localidad = document.querySelector('.consulta-form input[placeholder="Localidad"]').value;
                 const link = `https://wa.me/5491157202809?text=Hola PaddleShow! Quisiera consultar por la paleta ${titulo}, mi nombre es ${nombre} y vivo en ${localidad}, juego en la categoria ${categoria}, prefiero jugar del lado ${lado}, me gusta mas el/la ${ataque}, busco mejorar mi ${potencia}, mido ${altura} cm y peso ${peso} Kg`;
-                window.open(link, '_blank');
+                window.open(link);
                 setTimeout(() => {
                     document.querySelector('.consulta').style.display = 'none';
                 }, 3000);
