@@ -312,7 +312,7 @@ const paletas = [
         
         </ul>`,
         imagen2:'https://res.cloudinary.com/dj3akdhb9/image/upload/v1723173910/paddleshow/gama3/Head_Challenge_-removebg-preview_dtjq4q.png',
-        titulo3:'Magnus Hans Diamente',
+        titulo3:'Magnus Hans Diamante',
         descripcion3:`<ul>
             <li>Marca líder mundial, que fué utilizada por jugadores top como Federico Chiostri y Gonzalo Alfonso.</li>
 
